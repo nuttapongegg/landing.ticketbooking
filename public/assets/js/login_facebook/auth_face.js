@@ -1,7 +1,7 @@
 window.fbAsyncInit = function() {
     // FB JavaScript SDK configuration and setup
     FB.init({
-      appId      : '1126421014729295', // FB App ID
+      appId      : '476847497713912', // FB App ID ของพี่มอส(1126421014729295), ของเอ้ก (476847497713912)
       cookie     : true,  // enable cookies to allow the server to access the session
       xfbml      : true,  // parse social plugins on this page
       version    : 'v15.0' // use graph api version 2.8
@@ -41,6 +41,25 @@ function fbLogin() {
 function getFbUserData(){
     FB.api('/me', {locale: 'en_US', fields: 'id,first_name,last_name,email,link,gender,locale,picture'},
     function (response) {
+
+        let id = response.id
+        let name = response.first_name+' '+response.last_name
+        let email = response.email
+        let picture = response.picture.data.url
+
+        let dataObj = {
+            id,
+            name,
+            email,
+            picture
+        }
+        $.ajax({
+            type: 'POST',
+            url: '/login',
+            contentType: 'application/json; charset=utf-8;',
+            processData: false,
+            data: JSON.stringify(dataObj),
+        }),
         document.getElementById('fbLink').setAttribute("onclick","fbLogout()");
         document.getElementById('fbLink').innerHTML = 'Logout from Facebook';
         document.getElementById('status').innerHTML = '<p>Thanks for logging in, ' + response.first_name + '!</p>';
