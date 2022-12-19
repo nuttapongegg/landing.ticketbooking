@@ -75,7 +75,7 @@
 </head>
 
 <body>
-<script src="<?php echo base_url('assets/js/login_facebook/auth_face.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/js/login_facebook/auth_face.js'); ?>"></script>
     <script>
         function setLang(la) {
             if ($.cookie('__la') != undefined) {
@@ -151,7 +151,7 @@
                                     </div>
                                     <div class="col-auto d-none d-lg-block">
                                         <!-- <a class="btn-signin" href="javascript:void(0);" onclick="$app.popup.signin();">เข้าสู่ระบบ</a> -->
-                                        <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" scope="public_profile,email" onlogin="checkLoginState();" auto-logout-link="true"></div>
+                                        <a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><img src="images/fb-login-btn.png" /></a>
                                     </div>
                                 </div>
                             </div>
@@ -949,6 +949,8 @@
                 </div>
             </div>
         </div>
+        <!-- Display user's profile info -->
+        <div class="ac-data" id="userData"></div>
         <link rel="stylesheet" type="text/css" href="/assets/css/intlTelInput.min.css" />
         <script src="https://www.google.com/recaptcha/api.js?onload=onloadRC_signin" async defer></script>
         <script src="/assets/js/vendor/dobpicker.min.js"></script>
