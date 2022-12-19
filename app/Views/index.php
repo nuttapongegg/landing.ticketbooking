@@ -75,26 +75,7 @@
 </head>
 
 <body>
-    <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId: '326324767913792',
-                xfbml: true,
-                version: 'v14.0'
-            });
-            FB.AppEvents.logPageView();
-        };
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {
-                return;
-            }
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+<script src="<?php echo base_url('assets/js/login_facebook/auth_face.js'); ?>"></script>
     <script>
         function setLang(la) {
             if ($.cookie('__la') != undefined) {
@@ -169,7 +150,8 @@
                                         </div> -->
                                     </div>
                                     <div class="col-auto d-none d-lg-block">
-                                        <a class="btn-signin" href="javascript:void(0);" onclick="$app.popup.signin();">เข้าสู่ระบบ</a>
+                                        <!-- <a class="btn-signin" href="javascript:void(0);" onclick="$app.popup.signin();">เข้าสู่ระบบ</a> -->
+                                        <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" scope="public_profile,email" onlogin="checkLoginState();" auto-logout-link="true"></div>
                                     </div>
                                 </div>
                             </div>
@@ -233,7 +215,7 @@
                                                     </div>
                                                     <div class="col-auto">
                                                         <p>
-                                                            <a class="btn btn-main" href="javascript:void(0);" onclick="$app.popup.signin('https://www.thaiticketmajor.com/booking/1/zones.php?query=749&rdId=68988');"><span>ซื้อบัตร</span></a>
+                                                            <a class="btn btn-main" href="javascript:void(0);" onclick="checkLoginState();"><span>ซื้อบัตร</span></a>
                                                         </p>
                                                     </div>
                                                 </div>
