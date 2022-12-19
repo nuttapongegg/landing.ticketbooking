@@ -33,6 +33,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="manifest" href="assets/img/favicon/site.webmanifest">
     <meta name="msapplication-TileColor" content="#de0000">
     <meta name="theme-color" content="#ffffff">
@@ -151,7 +152,9 @@
                                     </div>
                                     <div class="col-auto d-none d-lg-block">
                                         <!-- <a class="btn-signin" href="javascript:void(0);" onclick="$app.popup.signin();">เข้าสู่ระบบ</a> -->
-                                        <a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><img src="images/fb-login-btn.png" /></a>
+                                        <div id="status"></div>
+                                        <a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square"  style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a>
+                                        <div class="ac-data" id="userData"></div>
                                     </div>
                                 </div>
                             </div>
