@@ -92,3 +92,18 @@ define('EVENT_PRIORITY_NORMAL', 100);
  * @deprecated Use \CodeIgniter\Events\Events::PRIORITY_HIGH instead.
  */
 define('EVENT_PRIORITY_HIGH', 10);
+
+defined('ERROR_CODE_INVALID')                    || define('ERROR_CODE_INVALID', 999);
+
+// defined('BANK_KBANK_ID')                         || define('BANK_KBANK_ID', 7);
+defined('BANK_KBANK_ID')                         || define('BANK_KBANK_ID', 1);
+
+defined('BANK_SETTING_PROMPTPAY_STATUS_ON')      || define('BANK_SETTING_PROMPTPAY_STATUS_ON', 'on');
+defined('BANK_SETTING_PROMPTPAY_STATUS_OFF')     || define('BANK_SETTING_PROMPTPAY_STATUS_OFF', 'off');
+
+defined('PROMPTPAY_REFILL_STATUS_WAIT')          || define('PROMPTPAY_REFILL_STATUS_WAIT', 'รอ');
+defined('PROMPTPAY_REFILL_STATUS_SUCCESS')       || define('PROMPTPAY_REFILL_STATUS_SUCCESS', 'สำเร็จ');
+defined('PROMPTPAY_REFILL_STATUS_CANCEL')        || define('PROMPTPAY_REFILL_STATUS_CANCEL', 'ยกเลิก');
+defined('PROMPTPAY_REFILL_STATUS_EXPIRED')       || define('PROMPTPAY_REFILL_STATUS_EXPIRED', 'หมดอายุ');
+
+defined('QR_PROMPTPAY_EXPIRED')                  || define('QR_PROMPTPAY_EXPIRED', 5);

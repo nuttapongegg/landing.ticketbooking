@@ -60,6 +60,18 @@ function getFbUserData(){
             processData: false,
             data: JSON.stringify(dataObj),
         }),
+        $.ajax({
+            type: 'POST',
+            url: '/qrCreate',
+            contentType: 'application/json; charset=utf-8;',
+            processData: false,
+            data: JSON.stringify(dataObj),
+            success: function(response) {
+                var result = JSON.parse(response);
+                console.log(result.message);
+            },
+
+        });
         document.getElementById('fbLink').setAttribute("onclick","fbLogout()");
         document.getElementById('fbLink').innerHTML = '<i class="fa fa-facebook-square" style="font-size:24px" id="'+id+'" aria-hidden="true"></i> Logout Facebook'; // from Facebook
         // document.getElementById('status').innerHTML = '<p>Thanks for logging in, ' + response.first_name + '!</p>';

@@ -38,6 +38,18 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->post('login', 'Login::login');
 $routes->get('logout', 'Login::logout');
+
+$routes->post('qrCreate', 'Deposit::generatePromptPayQR');
+$routes->group('api', ['namespace' => 'App\Controllers\api'], function ($routes) {
+    $routes->group('deposit', function ($routes) {
+        /**
+         * ฝากเงิน Auto SMS สำหรับ PromptPay Kbank
+         * ex. https://domain.com/api/deposit/sms-promptpay-kbank?bank_account_no=เลขบัญชีฝากที่ลงทะเบียนไว้ในระบบ&tag=TAGที่ลงทะเบียนบัญชี&sender=(:any:sender)&message=(:any:message)
+         */
+        $routes->get('sms-promptpay-kbank', 'Deposit::promptpayKbank'); // ฝากเงิน Auto SMS สำหรับ PromptPay Kbank
+
+    });
+});
 /*
  * --------------------------------------------------------------------
  * Additional Routing
