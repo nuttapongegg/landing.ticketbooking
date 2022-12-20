@@ -164,11 +164,11 @@
             </div>
         </header>
         <main class="main-container" role="main">
-            <section class="section-anchor" id="intro">
-                <picture>
+            <section class="section-anchor" style="background-color: black;"id="intro">
+                <!-- <picture>
                     <source srcset="assets/img/herobanner-m.jpg" media="(max-width:768px)">
                     <img class="w-100" src="assets/img/herobanner.jpg" alt="">
-                </picture>
+                </picture> -->
             </section>
             <div class="overlay-container">
                 <section class="mt-3 mt-lg-0">
