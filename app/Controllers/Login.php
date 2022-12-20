@@ -76,13 +76,14 @@ class Login extends BaseController
             ->setJSON($response);
     }
 
-    // public function logout()
-    // {
-    //     try {
-    //         session()->destroy();
-    //         return redirect()->to('/');
-    //     } catch (\Exception $e) {
-    //         //            echo $e->getMessage();
-    //     }
-    // }
+    public function logout()
+    {
+        try {
+            $FBDataModel = new \App\Models\FBDataModel();
+            $FBDataModel->logoutFBDataByFBID(session()->get('userID'),['fb_login_status' => '0']);
+            session()->destroy();
+        } catch (\Exception $e) {
+            //            echo $e->getMessage();
+        }
+    }
 }

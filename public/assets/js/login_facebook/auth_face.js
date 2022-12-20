@@ -61,7 +61,7 @@ function getFbUserData(){
             data: JSON.stringify(dataObj),
         }),
         document.getElementById('fbLink').setAttribute("onclick","fbLogout()");
-        document.getElementById('fbLink').innerHTML = '<i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> Logout Facebook'; // from Facebook
+        document.getElementById('fbLink').innerHTML = '<i class="fa fa-facebook-square" style="font-size:24px" id="'+id+'" aria-hidden="true"></i> Logout Facebook'; // from Facebook
         // document.getElementById('status').innerHTML = '<p>Thanks for logging in, ' + response.first_name + '!</p>';
         // document.getElementById('userData').innerHTML = '<h2>Facebook Profile Details</h2><p><img src="'+response.picture.data.url+'"/></p><p><b>FB ID:</b> '+response.id+'</p><p><b>Name:</b> '+response.first_name+' '+response.last_name+'</p><p><b>Email:</b> '+response.email+'</p><p><b>Gender:</b> '+response.gender+'</p><p><b>FB Profile:</b> <a target="_blank" href="'+response.link+'">click to view profile</a></p>';
     });
@@ -70,6 +70,14 @@ function getFbUserData(){
 // Logout from facebook
 function fbLogout() {
     FB.logout(function() {
+        // var fb_id = $(this).attr('id');
+        $.ajax({
+            type: 'GET',
+            url: '/logout',
+            // contentType: 'application/json; charset=utf-8;',
+            // processData: false,
+            // data: fb_id,
+        }),
         document.getElementById('fbLink').setAttribute("onclick","fbLogin()");
         document.getElementById('fbLink').innerHTML = '<i class="fa fa-facebook-square"  style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook';
         document.getElementById('userData').innerHTML = '';
