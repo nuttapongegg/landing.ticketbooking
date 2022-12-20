@@ -69,4 +69,11 @@ class FBDataModel
         $builder = $this->db->table('fb_data');
         return $builder->where('fb_id', $id)->get()->getResult();
     }
+
+    public function logoutFBDataByFBID($id, $data)
+    {
+        $builder = $this->db->table('fb_data');
+
+        return $builder->where('fb_id', $id)->update($data);
+    }
 }
