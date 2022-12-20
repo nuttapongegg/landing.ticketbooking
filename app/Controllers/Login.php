@@ -42,13 +42,15 @@ class Login extends BaseController
 
             $FBData = $FBDataModel->getFBData($id);
             $fd_data = '';
+            $fd_data_id = '';
             foreach ($FBData as $data) {
                 if($data->fb_id == $id){
+                    $fd_data_id = $data->id;
                     $fd_data = 1;
                 }
             }
             if($fd_data == 1){
-                $FBDataModel->updateFBDataByID($data->id, [
+                $FBDataModel->updateFBDataByID($fd_data_id, [
                     'fb_login_status' => 1,
                     'updated_at' => date('Y-m-d H:i:s')
                 ]);
