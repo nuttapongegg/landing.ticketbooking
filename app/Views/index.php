@@ -16,7 +16,7 @@
     <meta property="og:url" content="" />
     <meta property="og:title" content="Official Ticket | BLACKPINK WORLD TOUR [BORN PINK] BANGKOK" />
     <meta property="og:description" content="BLACKPINK WORLD TOUR [BORN PINK] BANGKOK" />
-    <meta property="og:image" content="https://www.thaiticketmajor.com/img_poster/prefix_1/2426/5426/black-pink-born-pink-world-tour-BKK-2023-635b8a98d8766-l.png" />
+    <meta property="og:image" content="#ffffff" />
     <meta property="article:publisher" content="" />
     <meta property="article:author" content="THAITICKETMAJOR" />
     <meta property="og:site_name" content="" />
@@ -28,7 +28,7 @@
     <meta name="twitter:creator" content="THAITICKETMAJOR" />
     <meta name="twitter:title" content="Official Ticket | BLACKPINK WORLD TOUR [BORN PINK] BANGKOK" />
     <meta name="twitter:description" content="BLACKPINK WORLD TOUR [BORN PINK] BANGKOK" />
-    <meta name="twitter:image" content="https://www.thaiticketmajor.com/img_poster/prefix_1/2426/5426/black-pink-born-pink-world-tour-BKK-2023-635b8a98d8766-l.png" />
+    <meta name="twitter:image" content="#ffffff" />
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
@@ -108,7 +108,7 @@
                                     <span class="active"></span>
                                 </a>
                             </div>
-                            <a class="main-logo col-auto" href="https://www.thaiticketmajor.com/index.php" role="logo" title="logo">
+                            <a class="main-logo col-auto" role="logo" title="logo">
                                 <img src="assets/img/ttm-logo-txt-white.png" alt="THAITICKETMAJOR : Thailand Ticket Center">
                             </a>
                             <nav class="main-nav col" role="navigation">
