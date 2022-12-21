@@ -228,6 +228,8 @@
                                                                     $name_user = session()->get('username');
                                                                     $test = 'onclick="buyTickets(this.id);"';
                                                                 } else {
+                                                                    $id_user = 0;
+                                                                    $name_user = 0;                                                                $name_user = session()->get('username');
                                                                     $test = 'onclick="fbLogin();"';
                                                                 } ?>
                                                                 <a class="btn btn-main" href="javascript:void(0);" id="<?php echo $id_user . "###" . $name_user . "###" .  $ticket->id . "###" . $tickets_count . "###" .  $ticket->ticket_price ."###". $ticket->ticket_pcs_count_sale; ?>" <?php echo $test ?>><span>ซื้อบัตร</span></a>
