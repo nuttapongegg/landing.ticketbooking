@@ -95,3 +95,183 @@ Stack trace:
 #10 C:\xampp\htdocs\landing.ticketbooking\public\index.php(67): CodeIgniter\CodeIgniter->run()
 #11 C:\xampp\htdocs\landing.ticketbooking\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #12 {main}
+ERROR - 2022-12-20 22:45:39 --> mysqli_sql_exception: Table 'ticketbooking.promptpay_refills' doesn't exist in C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\landing.ticketbooking\app\Models\PromptpayRefillModel.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(123): App\Models\PromptpayRefillModel->getPromptpayRefillByMemberIDAndStatus('294152801598284...', '\xE0\xB8\xA3\xE0\xB8\xAD')
+#6 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(34): App\Controllers\Deposit->getPromptPayQRByMemberID('294152801598284...')
+#7 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(907): App\Controllers\Deposit->generatePromptPayQR()
+#8 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Deposit))
+#9 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\landing.ticketbooking\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\landing.ticketbooking\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-12-20 22:45:44 --> mysqli_sql_exception: Table 'ticketbooking.promptpay_refills' doesn't exist in C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\landing.ticketbooking\app\Models\PromptpayRefillModel.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(123): App\Models\PromptpayRefillModel->getPromptpayRefillByMemberIDAndStatus('294152801598284...', '\xE0\xB8\xA3\xE0\xB8\xAD')
+#6 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(34): App\Controllers\Deposit->getPromptPayQRByMemberID('294152801598284...')
+#7 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(907): App\Controllers\Deposit->generatePromptPayQR()
+#8 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Deposit))
+#9 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\landing.ticketbooking\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\landing.ticketbooking\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-12-20 22:54:53 --> mysqli_sql_exception: Table 'ticketbooking.promptpay_refills' doesn't exist in C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\landing.ticketbooking\app\Models\PromptpayRefillModel.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(123): App\Models\PromptpayRefillModel->getPromptpayRefillByMemberIDAndStatus('294152801598284...', '\xE0\xB8\xA3\xE0\xB8\xAD')
+#6 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(34): App\Controllers\Deposit->getPromptPayQRByMemberID('294152801598284...')
+#7 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(907): App\Controllers\Deposit->generatePromptPayQR()
+#8 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Deposit))
+#9 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\landing.ticketbooking\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\landing.ticketbooking\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-12-20 22:56:26 --> mysqli_sql_exception: Table 'ticketbooking.promptpay_refills' doesn't exist in C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\landing.ticketbooking\app\Models\PromptpayRefillModel.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(123): App\Models\PromptpayRefillModel->getPromptpayRefillByMemberIDAndStatus('294152801598284...', '\xE0\xB8\xA3\xE0\xB8\xAD')
+#6 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(34): App\Controllers\Deposit->getPromptPayQRByMemberID('294152801598284...')
+#7 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(907): App\Controllers\Deposit->generatePromptPayQR()
+#8 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Deposit))
+#9 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\landing.ticketbooking\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\landing.ticketbooking\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-12-20 22:56:28 --> mysqli_sql_exception: Table 'ticketbooking.promptpay_refills' doesn't exist in C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\landing.ticketbooking\app\Models\PromptpayRefillModel.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(123): App\Models\PromptpayRefillModel->getPromptpayRefillByMemberIDAndStatus('294152801598284...', '\xE0\xB8\xA3\xE0\xB8\xAD')
+#6 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(34): App\Controllers\Deposit->getPromptPayQRByMemberID('294152801598284...')
+#7 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(907): App\Controllers\Deposit->generatePromptPayQR()
+#8 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Deposit))
+#9 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\landing.ticketbooking\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\landing.ticketbooking\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-12-20 22:56:31 --> mysqli_sql_exception: Table 'ticketbooking.promptpay_refills' doesn't exist in C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\landing.ticketbooking\app\Models\PromptpayRefillModel.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(123): App\Models\PromptpayRefillModel->getPromptpayRefillByMemberIDAndStatus('294152801598284...', '\xE0\xB8\xA3\xE0\xB8\xAD')
+#6 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(34): App\Controllers\Deposit->getPromptPayQRByMemberID('294152801598284...')
+#7 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(907): App\Controllers\Deposit->generatePromptPayQR()
+#8 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Deposit))
+#9 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\landing.ticketbooking\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\landing.ticketbooking\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-12-20 22:56:34 --> mysqli_sql_exception: Table 'ticketbooking.promptpay_refills' doesn't exist in C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\landing.ticketbooking\app\Models\PromptpayRefillModel.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(123): App\Models\PromptpayRefillModel->getPromptpayRefillByMemberIDAndStatus('294152801598284...', '\xE0\xB8\xA3\xE0\xB8\xAD')
+#6 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(34): App\Controllers\Deposit->getPromptPayQRByMemberID('294152801598284...')
+#7 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(907): App\Controllers\Deposit->generatePromptPayQR()
+#8 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Deposit))
+#9 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\landing.ticketbooking\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\landing.ticketbooking\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-12-20 23:03:26 --> mysqli_sql_exception: Table 'ticketbooking.promptpay_refills' doesn't exist in C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\landing.ticketbooking\app\Models\PromptpayRefillModel.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(123): App\Models\PromptpayRefillModel->getPromptpayRefillByMemberIDAndStatus('294152801598284...', '\xE0\xB8\xA3\xE0\xB8\xAD')
+#6 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(34): App\Controllers\Deposit->getPromptPayQRByMemberID('294152801598284...')
+#7 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(907): App\Controllers\Deposit->generatePromptPayQR()
+#8 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Deposit))
+#9 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\landing.ticketbooking\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\landing.ticketbooking\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-12-20 23:07:56 --> mysqli_sql_exception: Table 'ticketbooking.promptpay_refills' doesn't exist in C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\landing.ticketbooking\app\Models\PromptpayRefillModel.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(123): App\Models\PromptpayRefillModel->getPromptpayRefillByMemberIDAndStatus('294152801598284...', '\xE0\xB8\xA3\xE0\xB8\xAD')
+#6 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(34): App\Controllers\Deposit->getPromptPayQRByMemberID('294152801598284...')
+#7 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(907): App\Controllers\Deposit->generatePromptPayQR()
+#8 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Deposit))
+#9 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\landing.ticketbooking\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\landing.ticketbooking\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-12-20 23:08:13 --> mysqli_sql_exception: Table 'ticketbooking.promptpay_refills' doesn't exist in C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\landing.ticketbooking\app\Models\PromptpayRefillModel.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(123): App\Models\PromptpayRefillModel->getPromptpayRefillByMemberIDAndStatus('294152801598284...', '\xE0\xB8\xA3\xE0\xB8\xAD')
+#6 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(34): App\Controllers\Deposit->getPromptPayQRByMemberID('294152801598284...')
+#7 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(907): App\Controllers\Deposit->generatePromptPayQR()
+#8 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Deposit))
+#9 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\landing.ticketbooking\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\landing.ticketbooking\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-12-20 23:46:08 --> mysqli_sql_exception: Table 'ticketbooking.promptpay_refills' doesn't exist in C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\landing.ticketbooking\app\Models\PromptpayRefillModel.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(123): App\Models\PromptpayRefillModel->getPromptpayRefillByMemberIDAndStatus('294152801598284...', '\xE0\xB8\xA3\xE0\xB8\xAD')
+#6 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(34): App\Controllers\Deposit->getPromptPayQRByMemberID('294152801598284...')
+#7 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(907): App\Controllers\Deposit->generatePromptPayQR()
+#8 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Deposit))
+#9 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\landing.ticketbooking\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\landing.ticketbooking\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-12-20 23:46:13 --> mysqli_sql_exception: Table 'ticketbooking.promptpay_refills' doesn't exist in C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\landing.ticketbooking\app\Models\PromptpayRefillModel.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(123): App\Models\PromptpayRefillModel->getPromptpayRefillByMemberIDAndStatus('294152801598284...', '\xE0\xB8\xA3\xE0\xB8\xAD')
+#6 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(34): App\Controllers\Deposit->getPromptPayQRByMemberID('294152801598284...')
+#7 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(907): App\Controllers\Deposit->generatePromptPayQR()
+#8 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Deposit))
+#9 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\landing.ticketbooking\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\landing.ticketbooking\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
