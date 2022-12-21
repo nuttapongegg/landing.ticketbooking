@@ -80,9 +80,10 @@ function getFbUserData(){
 
         // });
         document.getElementById('fbLink').setAttribute("onclick","fbLogout()");
-        document.getElementById('fbLink').innerHTML = '<i class="fa fa-facebook-square" style="font-size:24px" id="'+id+'" aria-hidden="true"></i> Logout Facebook'; // from Facebook
-        document.getElementById('fbLink').setAttribute("onclick","fbLogout()");//<i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i>
-        document.getElementById('fbLink').innerHTML = '<div class="d-flex"> <div class="me-3 mt-1"> <span class="avatar"> <img src="'+response.picture.data.url+'" alt="img" class="rounded-circle"></span></div><div class="d-flex1 mt-3">&nbsp; <a>Logout Facebook</a></div></div> '; // from Facebook
+        document.getElementById('fbLink').innerHTML = '<div class="d-flex"> <div class="mt-1"> <span class="avatar"> <img src="'+response.picture.data.url+'" alt="img" class="rounded-circle" style="width: 30px; height: 30px;"></span></div><div class="d-flex1 mt-2">&nbsp; <a>Logout </a></div></div> '; // from Facebook
+        // document.getElementById('fbLink').innerHTML = '<i class="fa fa-facebook-square" style="font-size:24px" id="'+id+'" aria-hidden="true"></i> Logout Facebook'; // from Facebook
+        // document.getElementById('fbLink').setAttribute("onclick","fbLogout()");//<i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i>
+        // document.getElementById('fbLink').innerHTML = '<div class="d-flex"> <div class="me-3 mt-1"> <span class="avatar"> <img src="'+response.picture.data.url+'" alt="img" class="rounded-circle"></span></div><div class="d-flex1 mt-3">&nbsp; <a>Logout Facebook</a></div></div> '; // from Facebook
         // document.getElementById('status').innerHTML = '<p>Thanks for logging in, ' + response.first_name + '!</p>';
         // document.getElementById('userData').innerHTML = '<h2>Facebook Profile Details</h2><p><img src="'+response.picture.data.url+'"/></p><p><b>FB ID:</b> '+response.id+'</p><p><b>Name:</b> '+response.first_name+' '+response.last_name+'</p><p><b>Email:</b> '+response.email+'</p><p><b>Gender:</b> '+response.gender+'</p><p><b>FB Profile:</b> <a target="_blank" href="'+response.link+'">click to view profile</a></p>';
     });

@@ -38,6 +38,7 @@ class Login extends BaseController
                 'username' => $name,
                 'email' => $email,
                 'picture' => $picture,
+                'session' => 1
             ]);
 
             $FBData = $FBDataModel->getFBData($id);

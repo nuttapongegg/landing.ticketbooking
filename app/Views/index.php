@@ -29,6 +29,8 @@
     <meta name="twitter:title" content="Official Ticket | BLACKPINK WORLD TOUR [BORN PINK] BANGKOK" />
     <meta name="twitter:description" content="BLACKPINK WORLD TOUR [BORN PINK] BANGKOK" />
     <meta name="twitter:image" content="#ffffff" />
+    <!--  Bootstrap css-->
+    <link id="style" href="<?php echo base_url('/assets/plugins/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" />
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
@@ -153,18 +155,14 @@
                                     <div class="col-auto d-none d-lg-block">
                                         <!-- <a class="btn-signin" href="javascript:void(0);" onclick="$app.popup.signin();">เข้าสู่ระบบ</a> -->
                                         <div id="status"></div>
-                                        <?php 
-                                        if(session()->get('userID') !== null){ ?>
-                                           <!-- <div id="fbLink"></div> -->
-                                           <a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a>
-                                        <?php 
-                                        }
-                                        else 
-                                        {
-                                        ?>
-                                            <a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a>
-                                       <?php } ?>
-                                    
+                                        <?php if (session()->get('session') ==  1) {
+                                            $login = '<a href="javascript:void(0);" onclick="fbLogout()" id="fbLink"><div class="d-flex"> <div class="me-3 mt-1"> <span class="avatar"><img src="' . session()->get('picture') . '" alt="img" class="rounded-circle" style="width: 30px; height: 30px;"></span></div><div class="d-flex1 mt-2">&nbsp; <a>Logout </a></div></div> </a>';
+                                        } else {
+                                            $login = '<a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a>';
+                                        } ?>
+                                        <!-- <php echo $login ?> -->
+                                        <!-- <a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a> -->
+                                        <a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a>
                                         <div class="ac-data" id="userData"></div>
                                     </div>
                                 </div>
@@ -175,11 +173,11 @@
             </div>
         </header>
         <main class="main-container" role="main">
-            <section class="section-anchor" style="background-color: black;"id="intro">
-                <!-- <picture>
+            <section class="section-anchor" id="intro">
+                <picture>
                     <source srcset="assets/img/herobanner-m.jpg" media="(max-width:768px)">
                     <img class="w-100" src="assets/img/herobanner.jpg" alt="">
-                </picture> -->
+                </picture>
             </section>
             <div class="overlay-container">
                 <section class="mt-3 mt-lg-0">
@@ -203,7 +201,39 @@
                             <div class="col-12 col-xl-10">
                                 <h2 class="h2" data-aos="fade-up">วันที่แสดง</h2>
                                 <div class="row justify-content-center">
-                                    <div class="col-12 col-lg-10 col-xl-7 col-xxl-8">
+                                    <?php foreach ($tickets as $ticket) { ?>
+
+                                        <?php $tickets_count = 0;
+                                        if ($ticket->ticket_pcs_count_sale != '') {
+                                            $tickets_count = $ticket->ticket_pcs - $ticket->ticket_pcs_count_sale;
+                                        } else {
+                                            $tickets_count = $ticket->ticket_pcs;
+                                        }
+                                        ?>
+                                        <div class="col-12 col-lg-10 col-xl-7 col-xxl-8">
+                                            <div class="post-it mb-3" data-aos="fade-up">
+                                                <div class="inner py-1 px-3">
+                                                    <div class="row align-items-center">
+                                                        <div class="col">
+                                                            <p class="p text-left"><?php echo $ticket->ticket_name . ' ' . $ticket->ticket_detail . '&nbsp;บัตรคงเหลือ (' . $tickets_count . ' ใบ)' ?></p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <p>
+                                                                <?php if (session()->get('session') ==  1) {
+                                                                    $test = 'data-bs-toggle="modal" data-bs-target="#modalChoose_Number"';
+                                                                } else {
+                                                                    $test = 'onclick="fbLogin();"';
+                                                                } ?>
+                                                                <a class="btn btn-main" href="javascript:void(0);" <?php echo $test ?>><span>ซื้อบัตร</span></a>
+                                                                <!-- onclick="$app.popup.signin('https://www.thaiticketmajor.com/booking/1/zones.php?query=749&rdId=68987');" -->
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php } ?>
+                                    <!-- <div class="col-12 col-lg-10 col-xl-7 col-xxl-8">
                                         <div class="post-it mb-3" data-aos="fade-up">
                                             <div class="inner py-1 px-3">
                                                 <div class="row align-items-center">
@@ -212,14 +242,14 @@
                                                     </div>
                                                     <div class="col-auto">
                                                         <p>
-                                                            <a class="btn btn-main" href="javascript:void(0);" onclick="$app.popup.signin();"><span>ซื้อบัตร</span></a>
+                                                            <a class="btn btn-main" href="javascript:void(0);" onclick="$app.popup.signin('https://www.thaiticketmajor.com/booking/1/zones.php?query=749&rdId=68987');"><span>ซื้อบัตร</span></a>
                                                         </p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-12"></div>
+                                    </div> -->
+                                    <!-- <div class="col-12"></div>
                                     <div class="col-12 col-lg-10 col-xl-7 col-xxl-8">
                                         <div class="post-it mb-3" data-aos="fade-up">
                                             <div class="inner py-1 px-3">
@@ -235,13 +265,13 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="col-12 col-xl-10">
                                 <div class="line mb-3 mb-lg-5" data-aos="fade-up"></div>
                             </div>
-                            <div class="col-12 col-lg-6 col-xl-5">
+                            <!-- <div class="col-12 col-lg-6 col-xl-5">
                                 <div data-aos="fade-up">
                                     <h2 class="h2">วันพรีเซลล์</h2>
                                     <p class="p"><span class="d-block my-3">
@@ -280,14 +310,14 @@
                                         <a href="https://goo.gl/maps/a3bLS7c2XdmUutY67" target="_blank" class="d-block text-white p-3 text-center text-muted">สนามกีฬาแห่งชาติ (สนามศุภชลาศัย)<i class="fa fa-long-arrow-right ml-2" aria-hidden="true"></i></a>
                                     </p>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </section>
                 <div class="bg"></div>
                 <div class="opacity"></div>
             </div>
-            <div class="detail-container">
+            <!-- <div class="detail-container">
                 <section class="section-anchor pt-0 pt-lg-3" id="detail">
                     <div class="container py-5">
                         <div class="row justify-content-center">
@@ -554,7 +584,7 @@
                         </div>
                     </div>
                 </section>
-            </div>
+            </div> -->
         </main>
         <footer class="main-footer">
             <div class="footer-container container">
@@ -654,6 +684,8 @@
     <!-- LAZY -->
     <script src="assets/js/vendor/lazy/jquery.lazy.min.js"></script>
     <script src="assets/js/vendor/lazy/jquery.lazy.youtube.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="<?php echo base_url('/assets/plugins/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -694,6 +726,31 @@
             disable: 'mobile'
         });
     </script>
+    <!-- modalChoose_Number -->
+    <div class="modal fade" id="modalChoose_Number" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">เพิ่มไฟแนนซ์</h6>
+                    <button type="button" class="btn-close mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="form-group">
+                            <div align="left">
+                                <label for="finance">ชื่อไฟแนนซ์<?php echo session()->get('session') ?></label>
+                                <input type="text" class="form-control" id="finance" name="finance" placeholder="ชื่อไฟแนนซ์">
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: center;">
+                            <button class="btn btn-primary btnSave" type="button">ยืนยัน</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modalChoose_Number-->
 </body>
 
 </html>
