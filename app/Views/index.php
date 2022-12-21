@@ -223,7 +223,10 @@
                                                         </div>
                                                         <div class="col-auto">
                                                             <p>
-                                                                <?php if (session()->get('session') ==  1) {
+                                                                <?php
+                                                                $id_user = '';
+                                                                $name_user = '';
+                                                                 if (session()->get('session') ==  1) {
                                                                     $id_user = session()->get('userID');
                                                                     $name_user = session()->get('username');
                                                                     $test = 'onclick="buyTickets(this.id);"';
