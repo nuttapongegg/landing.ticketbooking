@@ -11,6 +11,7 @@ class Deposit extends BaseController
         // $this->MemberModel = new \App\Models\MemberModel();
         $this->BankSettingModel = new \App\Models\BankSettingModel();
         $this->PromptpayRefillModel = new \App\Models\PromptpayRefillModel();
+        $this->TicketsModel = new \App\Models\TicketsModel();
     }
 
     public function promptpayKbank()
@@ -88,6 +89,10 @@ class Deposit extends BaseController
             ]);
             if (!$updatePromptpayRefill) return;
 
+            $updateCountSale = $this->TicketsModel->updateTicketsByID($promptpayRefill->transaction_id, [
+                    'ticket_pcs_count_sale' => $promptpayRefill->transaction_count
+             ]);
+
             // เช็คว่ามียูสในระบบจริง ๆ หรือไม่
             // $member = $this->MemberModel->getMemberByID($promptpayRefill->member_id);
             // if (!$member) return;
@@ -101,6 +106,8 @@ class Deposit extends BaseController
         $response = [
             'message' => 'success'
         ];
+
+
 
         return $this->response
             ->setStatusCode($status)

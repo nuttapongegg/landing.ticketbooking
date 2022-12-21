@@ -11,6 +11,7 @@ class Deposit extends BaseController
     {
         $this->BankSettingModel = new \App\Models\BankSettingModel();
         $this->PromptpayRefillModel = new \App\Models\PromptpayRefillModel();
+        $this->TicketsModel = new \App\Models\TicketsModel();
     }
 
     public function generatePromptPayQR()
@@ -22,8 +23,9 @@ class Deposit extends BaseController
         try {
             // HANDLE REQUEST
             $requestPayload = $this->request->getJSON();
-            // $amount = (int) str_replace(',', '', $requestPayload->credit);
-            $amount = (int) str_replace(',', '', 200.00);
+            $amount = 0;
+            $amount = (int) str_replace(',', '', $requestPayload->price_sum);
+            // $amount = (int) str_replace(',', '', 200.00);
             if (!is_int($amount)) throw new \Exception('ไม่สามารถใส่ทศนิยมได้', ERROR_CODE_INVALID);
             if ($amount <= 0) throw new \Exception('จำนวนเงินไม่ถูกต้อง', ERROR_CODE_INVALID);
 
@@ -31,19 +33,19 @@ class Deposit extends BaseController
             $memberID = session()->get('userID');
 
             // ค้นหาว่า qrcode ที่ยังไม่หมดอายุ
-            $promptpayQR = $this->getPromptPayQRByMemberID($memberID);
+            // $promptpayQR = $this->getPromptPayQRByMemberID($memberID);
 
-            // กรณี : มี qrcode ที่ยังไม่หมดอายุจะเอาส่ง qrcode อันเดิมกลับมา
-            if ($promptpayQR) {
-                $response['success'] = 1;
-                $response['message'] = 'success';
-                $response['data'] = $promptpayQR['data'];
+            // // กรณี : มี qrcode ที่ยังไม่หมดอายุจะเอาส่ง qrcode อันเดิมกลับมา
+            // if ($promptpayQR) {
+            //     $response['success'] = 1;
+            //     $response['message'] = 'success';
+            //     $response['data'] = $promptpayQR['data'];
 
-                return $this->response
-                    ->setStatusCode($status)
-                    ->setContentType('application/json')
-                    ->setJSON($response);
-            }
+            //     return $this->response
+            //         ->setStatusCode($status)
+            //         ->setContentType('application/json')
+            //         ->setJSON($response);
+            // }
 
             $bankSetting = $this->BankSettingModel->getBankSettingPromptPay();
             if (!$bankSetting) throw new \Exception('ไม่สามารถสร้าง QRCode ได้', ERROR_CODE_INVALID);
@@ -65,7 +67,7 @@ class Deposit extends BaseController
 
             // เอายอดเงินที่ random ขึ้นมาเก็บลง db ไว้เทียบ
             $this->PromptpayRefillModel->insertPromptpayRefill([
-                'member_id'       => $memberID,
+                'member_id'       => (int)$memberID,
                 'amount'          => $amount,
                 'amount_random'   => $amountRandom,
                 'qrcode'          => $qrcode,
@@ -73,6 +75,8 @@ class Deposit extends BaseController
                 'bank_name'       => $bankSetting->bank_name,
                 'bank_setting_id' => $bankSetting->id,
                 'bank_account_no' => $bankSetting->bank_account_no,
+                'transaction_id' => $requestPayload->id_tickets,
+                'transaction_count' => $requestPayload->count_tickets_in_stock_update,
                 'version'         => $memberID . '_' . time()
             ]);
 
@@ -100,7 +104,7 @@ class Deposit extends BaseController
         $response['success'] = 0;
         $response['message'] = '';
 
-        $canceled = $this->PromptpayRefillModel->updatePromptpayRefillByMemberIDAndStatus(session()->get('user_id'), PROMPTPAY_REFILL_STATUS_WAIT, [
+       $canceled = $this->PromptpayRefillModel->updatePromptpayRefillByMemberIDAndStatus(session()->get('userID'), PROMPTPAY_REFILL_STATUS_WAIT, [
             'status' => PROMPTPAY_REFILL_STATUS_CANCEL,
             'updated_at' => date('Y-m-d H:i:s')
         ]);
@@ -124,7 +128,7 @@ class Deposit extends BaseController
 
         if ($promptPayRefill) {
             $now = date('Y-m-d H:i:s');
-            $minutes = intval((strtotime($now) - strtotime($promptPayRefill->created_at)) / 60);
+            $minutes = intval((strtotime($now) - strtotime($promptPayRefill->created_at)) / 1);
             $seconds = intval((strtotime($now) - strtotime($promptPayRefill->created_at)));
             $isQRCodeExpired = $minutes >= QR_PROMPTPAY_EXPIRED;
 

@@ -39,6 +39,7 @@ $routes->get('/', 'Home::index');
 $routes->post('login', 'Login::login');
 $routes->get('logout', 'Login::logout');
 
+$routes->get('qrCancel', 'Deposit::cancelPromptPayQR');
 $routes->post('qrCreate', 'Deposit::generatePromptPayQR');
 $routes->group('api', ['namespace' => 'App\Controllers\api'], function ($routes) {
     $routes->group('deposit', function ($routes) {

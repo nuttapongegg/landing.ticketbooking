@@ -1,0 +1,78 @@
+ERROR - 2022-12-21 04:08:49 --> mysqli_sql_exception: Duplicate column name 'transaction_count' in C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php(292): mysqli->query('ALTER TABLE `pr...', 0)
+#1 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('ALTER TABLE `pr...')
+#2 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('ALTER TABLE `pr...')
+#3 C:\xampp\htdocs\landing.ticketbooking\app\Database\Migrations\2022-12-21-100523_AddTransectionCount.php(13): CodeIgniter\Database\BaseConnection->query('ALTER TABLE `pr...')
+#4 C:\xampp\htdocs\landing.ticketbooking\system\Database\MigrationRunner.php(868): App\Database\Migrations\AddTransectionCount->up()
+#5 C:\xampp\htdocs\landing.ticketbooking\system\Database\MigrationRunner.php(187): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#6 C:\xampp\htdocs\landing.ticketbooking\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\xampp\htdocs\landing.ticketbooking\system\CLI\Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\xampp\htdocs\landing.ticketbooking\system\CLI\CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\xampp\htdocs\landing.ticketbooking\system\CLI\CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#10 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(900): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#11 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#12 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\landing.ticketbooking\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\landing.ticketbooking\spark(98): CodeIgniter\CLI\Console->run()
+#15 {main}
+ERROR - 2022-12-21 04:10:06 --> mysqli_sql_exception: Duplicate column name 'transaction_count' in C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php(292): mysqli->query('ALTER TABLE `pr...', 0)
+#1 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('ALTER TABLE `pr...')
+#2 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('ALTER TABLE `pr...')
+#3 C:\xampp\htdocs\landing.ticketbooking\app\Database\Migrations\2022-12-21-100523_AddTransectionCount.php(13): CodeIgniter\Database\BaseConnection->query('ALTER TABLE `pr...')
+#4 C:\xampp\htdocs\landing.ticketbooking\system\Database\MigrationRunner.php(868): App\Database\Migrations\AddTransectionCount->up()
+#5 C:\xampp\htdocs\landing.ticketbooking\system\Database\MigrationRunner.php(187): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#6 C:\xampp\htdocs\landing.ticketbooking\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\xampp\htdocs\landing.ticketbooking\system\CLI\Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\xampp\htdocs\landing.ticketbooking\system\CLI\CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\xampp\htdocs\landing.ticketbooking\system\CLI\CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#10 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(900): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#11 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#12 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\landing.ticketbooking\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\landing.ticketbooking\spark(98): CodeIgniter\CLI\Console->run()
+#15 {main}
+ERROR - 2022-12-21 04:34:44 --> mysqli_sql_exception: Duplicate entry '1865912110413593_1671618884' for key 'version' in C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\landing.ticketbooking\app\Models\PromptpayRefillModel.php(40): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(80): App\Models\PromptpayRefillModel->insertPromptpayRefill(Array)
+#6 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(907): App\Controllers\Deposit->generatePromptPayQR()
+#7 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Deposit))
+#8 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\landing.ticketbooking\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\landing.ticketbooking\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2022-12-21 05:05:43 --> mysqli_sql_exception: Duplicate entry '1865912110413593_1671620743' for key 'version' in C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\landing.ticketbooking\app\Models\PromptpayRefillModel.php(40): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(80): App\Models\PromptpayRefillModel->insertPromptpayRefill(Array)
+#6 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(907): App\Controllers\Deposit->generatePromptPayQR()
+#7 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Deposit))
+#8 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\landing.ticketbooking\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\landing.ticketbooking\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2022-12-21 05:12:02 --> mysqli_sql_exception: Duplicate entry '1865912110413593_1671621122' for key 'version' in C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\landing.ticketbooking\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\landing.ticketbooking\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\landing.ticketbooking\app\Models\PromptpayRefillModel.php(40): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\landing.ticketbooking\app\Controllers\Deposit.php(80): App\Models\PromptpayRefillModel->insertPromptpayRefill(Array)
+#6 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(907): App\Controllers\Deposit->generatePromptPayQR()
+#7 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Deposit))
+#8 C:\xampp\htdocs\landing.ticketbooking\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\landing.ticketbooking\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\landing.ticketbooking\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}

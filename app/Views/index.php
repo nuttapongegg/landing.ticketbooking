@@ -199,15 +199,18 @@
                     <div class="container pt-5 pb-0 pb-lg-5 ticket-container">
                         <div class="row justify-content-center">
                             <div class="col-12 col-xl-10">
-                                <h2 class="h2" data-aos="fade-up">วันที่แสดง</h2>
+                                <h2 class="h2" data-aos="fade-up">Event Tickes</h2>
                                 <div class="row justify-content-center">
+                                    <input type="hidden" id="user_id" value="<?php echo  session()->get('userID'); ?>"></input>
                                     <?php foreach ($tickets as $ticket) { ?>
 
                                         <?php $tickets_count = 0;
-                                        if ($ticket->ticket_pcs_count_sale != '') {
+                                        if ($ticket->ticket_pcs_count_sale != 0) {
                                             $tickets_count = $ticket->ticket_pcs - $ticket->ticket_pcs_count_sale;
                                         } else {
+                                            
                                             $tickets_count = $ticket->ticket_pcs;
+                                           
                                         }
                                         ?>
                                         <div class="col-12 col-lg-10 col-xl-7 col-xxl-8">
@@ -215,16 +218,18 @@
                                                 <div class="inner py-1 px-3">
                                                     <div class="row align-items-center">
                                                         <div class="col">
-                                                            <p class="p text-left"><?php echo $ticket->ticket_name . ' ' . $ticket->ticket_detail . '&nbsp;บัตรคงเหลือ (' . $tickets_count . ' ใบ)' ?></p>
+                                                            <p class="p text-left"><?php echo $ticket->ticket_name . ' ' . $ticket->ticket_detail . '&nbsp;บัตรคงเหลือ (' . $tickets_count . ' ใบ)&nbsp; ราคา&nbsp;(' . $ticket->ticket_price . ' บาท/ใบ)' ?></p>
                                                         </div>
                                                         <div class="col-auto">
                                                             <p>
                                                                 <?php if (session()->get('session') ==  1) {
-                                                                    $test = 'data-bs-toggle="modal" data-bs-target="#modalChoose_Number"';
+                                                                    $id_user = session()->get('userID');
+                                                                    $name_user = session()->get('username');
+                                                                    $test = 'onclick="buyTickets(this.id);"';
                                                                 } else {
                                                                     $test = 'onclick="fbLogin();"';
                                                                 } ?>
-                                                                <a class="btn btn-main" href="javascript:void(0);" <?php echo $test ?>><span>ซื้อบัตร</span></a>
+                                                                <a class="btn btn-main" href="javascript:void(0);" id="<?php echo $id_user . "###" . $name_user . "###" .  $ticket->id . "###" . $tickets_count . "###" .  $ticket->ticket_price ."###". $ticket->ticket_pcs_count_sale; ?>" <?php echo $test ?>><span>ซื้อบัตร</span></a>
                                                                 <!-- onclick="$app.popup.signin('https://www.thaiticketmajor.com/booking/1/zones.php?query=749&rdId=68987');" -->
                                                             </p>
                                                         </div>
@@ -717,7 +722,7 @@
             $(function() {
                 $app.form.signin();
                 $app.form.signup();
-                
+
             });
         </script>
     </div>
@@ -730,19 +735,17 @@
     <div class="modal fade" id="modalChoose_Number" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h6 class="modal-title">เพิ่มไฟแนนซ์</h6>
-                    <button type="button" class="btn-close mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
                 <div class="modal-body">
                     <form action="#">
                         <div class="form-group">
-                            <div align="left">
-                                <label for="finance">ชื่อไฟแนนซ์<?php echo session()->get('session') ?></label>
-                                <input type="text" class="form-control" id="finance" name="finance" placeholder="ชื่อไฟแนนซ์">
+                            <div align="left" class=" mb-3">
+                                <label for="number_select" id="numlabel" style="text-align: center;">กรอกจำนวนบัตร</label>
+                                <input type="number" class="form-control" oninput="this.value = Math.round(this.value);" id="number_select" name="number_select">
                             </div>
+                            <div style="display: flex; justify-content: center;" id="QR_code"></div>
                         </div>
                         <div style="display: flex; justify-content: center;">
+                            <button class="btn btn-warning mr-3 btnCancel" type="button">ยกเลิก</button>
                             <button class="btn btn-primary btnSave" type="button">ยืนยัน</button>
                         </div>
                     </form>
@@ -754,4 +757,18 @@
 </body>
 
 </html>
-<h2></h2>
+<script src="<?php echo base_url('assets/js/login_facebook/buy_tickets.js'); ?>"></script>
+<script>
+    $(".btnCancel").click(function() {
+        $('#modalChoose_Number').modal('hide');
+        $('#number_select').val('');
+        $("#QR_code").html('<div style="display: flex; justify-content: center;" id="QR_code"></div>');
+
+        $.ajax({
+            type: 'get',
+            url: '/qrCancel',
+            contentType: 'application/json; charset=utf-8;',
+            processData: false,
+        });
+    });
+</script>

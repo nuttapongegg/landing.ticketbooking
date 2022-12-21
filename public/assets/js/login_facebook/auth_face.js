@@ -52,8 +52,6 @@ function getFbUserData(){
         let email = response.email
         let picture = response.picture.data.url
 
-       
-
         let dataObj = {
             id,
             name,
@@ -67,18 +65,7 @@ function getFbUserData(){
             processData: false,
             data: JSON.stringify(dataObj),
         }),
-        // $.ajax({
-        //     type: 'POST',
-        //     url: '/qrCreate',
-        //     contentType: 'application/json; charset=utf-8;',
-        //     processData: false,
-        //     data: JSON.stringify(dataObj),
-        //     success: function(response) {
-        //         var result = JSON.parse(response);
-        //         console.log(result.message);
-        //     },
-
-        // });
+        location.reload();
         document.getElementById('fbLink').setAttribute("onclick","fbLogout()");
         document.getElementById('fbLink').innerHTML = '<div class="d-flex"> <div class="mt-1"> <span class="avatar"> <img src="'+response.picture.data.url+'" alt="img" class="rounded-circle" style="width: 30px; height: 30px;"></span></div><div class="d-flex1 mt-2">&nbsp; <a>Logout </a></div></div> '; // from Facebook
         // document.getElementById('fbLink').innerHTML = '<i class="fa fa-facebook-square" style="font-size:24px" id="'+id+'" aria-hidden="true"></i> Logout Facebook'; // from Facebook
@@ -107,4 +94,5 @@ function fbLogout() {
     });
 }
 
-console.log(id);
+
+
