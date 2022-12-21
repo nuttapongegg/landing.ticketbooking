@@ -1,7 +1,12 @@
+var id = "";
+var name = "";
+var email = "";
+var picture = "";
+
 window.fbAsyncInit = function() {
     // FB JavaScript SDK configuration and setup
     FB.init({
-      appId      : '476847497713912', // FB App ID ของพี่มอส(1126421014729295), ของเอ้ก (476847497713912)
+      appId      : '1126421014729295', // FB App ID ของพี่มอส(1126421014729295), ของเอ้ก (476847497713912)
       cookie     : true,  // enable cookies to allow the server to access the session
       xfbml      : true,  // parse social plugins on this page
       version    : 'v15.0' // use graph api version 2.8
@@ -47,6 +52,8 @@ function getFbUserData(){
         let email = response.email
         let picture = response.picture.data.url
 
+       
+
         let dataObj = {
             id,
             name,
@@ -60,18 +67,18 @@ function getFbUserData(){
             processData: false,
             data: JSON.stringify(dataObj),
         }),
-        $.ajax({
-            type: 'POST',
-            url: '/qrCreate',
-            contentType: 'application/json; charset=utf-8;',
-            processData: false,
-            data: JSON.stringify(dataObj),
-            success: function(response) {
-                var result = JSON.parse(response);
-                console.log(result.message);
-            },
+        // $.ajax({
+        //     type: 'POST',
+        //     url: '/qrCreate',
+        //     contentType: 'application/json; charset=utf-8;',
+        //     processData: false,
+        //     data: JSON.stringify(dataObj),
+        //     success: function(response) {
+        //         var result = JSON.parse(response);
+        //         console.log(result.message);
+        //     },
 
-        });
+        // });
         document.getElementById('fbLink').setAttribute("onclick","fbLogout()");
         document.getElementById('fbLink').innerHTML = '<i class="fa fa-facebook-square" style="font-size:24px" id="'+id+'" aria-hidden="true"></i> Logout Facebook'; // from Facebook
         document.getElementById('fbLink').setAttribute("onclick","fbLogout()");//<i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i>
@@ -98,3 +105,5 @@ function fbLogout() {
         document.getElementById('status').innerHTML = '';
     });
 }
+
+console.log(id);

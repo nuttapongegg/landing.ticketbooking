@@ -153,7 +153,18 @@
                                     <div class="col-auto d-none d-lg-block">
                                         <!-- <a class="btn-signin" href="javascript:void(0);" onclick="$app.popup.signin();">เข้าสู่ระบบ</a> -->
                                         <div id="status"></div>
-                                        <a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a>
+                                        <?php 
+                                        if(session()->get('userID') !== null){ ?>
+                                           <!-- <div id="fbLink"></div> -->
+                                           <a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a>
+                                        <?php 
+                                        }
+                                        else 
+                                        {
+                                        ?>
+                                            <a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a>
+                                       <?php } ?>
+                                    
                                         <div class="ac-data" id="userData"></div>
                                     </div>
                                 </div>
@@ -674,6 +685,7 @@
             $(function() {
                 $app.form.signin();
                 $app.form.signup();
+                
             });
         </script>
     </div>
