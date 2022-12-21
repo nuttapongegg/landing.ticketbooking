@@ -6,7 +6,7 @@ var picture = "";
 window.fbAsyncInit = function() {
     // FB JavaScript SDK configuration and setup
     FB.init({
-      appId      : '1126421014729295', // FB App ID ของพี่มอส(1126421014729295), ของเอ้ก (476847497713912)
+      appId      : '476847497713912', // FB App ID ของพี่มอส(1126421014729295), ของเอ้ก (476847497713912)
       cookie     : true,  // enable cookies to allow the server to access the session
       xfbml      : true,  // parse social plugins on this page
       version    : 'v15.0' // use graph api version 2.8
