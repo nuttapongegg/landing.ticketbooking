@@ -155,14 +155,15 @@
                                     <div class="col-auto d-none d-lg-block">
                                         <!-- <a class="btn-signin" href="javascript:void(0);" onclick="$app.popup.signin();">เข้าสู่ระบบ</a> -->
                                         <div id="status"></div>
+                                        <div id="revenues"></div>
                                         <?php if (session()->get('session') ==  1) {
-                                            $login = '<a href="javascript:void(0);" onclick="fbLogout()" id="fbLink"><div class="d-flex"> <div class="me-3 mt-1"> <span class="avatar"><img src="' . session()->get('picture') . '" alt="img" class="rounded-circle" style="width: 30px; height: 30px;"></span></div><div class="d-flex1 mt-2">&nbsp; <a>Logout </a></div></div> </a>';
-                                        } else {
-                                            $login = '<a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a>';
-                                        } ?>
-                                        <!-- <php echo $login ?> -->
+                                                    $login = '<a href="javascript:void(0);" onclick="fbLogout();" id="fbLink"><div class="d-flex"><div class="me-2 mt-1"><span class="avatar"><img src="' . session()->get('picture') . '" alt="img" class="rounded-circle" style="width: 30px; height: 30px;"></span></div><div class="d-flex1 mt-2">Logout</div></div></a>';
+                                                } else {
+                                                    $login = '<a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a>';
+                                                } ?>
+                                        <?php echo $login ?>
                                         <!-- <a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a> -->
-                                        <a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a>
+                                        <!-- <a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a> -->
                                         <div class="ac-data" id="userData"></div>
                                     </div>
                                 </div>
