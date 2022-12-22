@@ -12527,7 +12527,7 @@ strong {
 }
 
 .btn-menu span.active {
-    background: url("../img/icon/close.svg") 50% 50%/28px auto no-repeat;
+    background: url("https://www.thaiticketmajor.com/blackpink-born-pink-world-tour-bangkok/assets/img/icon/close.svg") 50% 50%/28px auto no-repeat;
     opacity: 0;
     visibility: hidden;
     -webkit-transform: scale(0.3);
@@ -12538,7 +12538,7 @@ strong {
 }
 
 .btn-menu span.inactive {
-    background: url("../img/icon/menu.svg") 50% 50%/20px auto no-repeat;
+    background: url("https://www.thaiticketmajor.com/blackpink-born-pink-world-tour-bangkok/assets/img/icon/menu.svg") 50% 50%/20px auto no-repeat;
     opacity: 1;
     visibility: visible;
     -webkit-transform: scale(1);

@@ -111,7 +111,7 @@
                                 </a>
                             </div>
                             <a class="main-logo col-auto" role="logo" title="logo">
-                                <img src="assets/img/ttm-logo-txt-white.png" alt="EVENS UP">
+                                <img src="<?php echo base_url('assets/img/ttm-logo-txt-white.png'); ?>" alt="EVENS UP">
                             </a>
                             <nav class="main-nav col" role="navigation">
                                 <div class="row">
