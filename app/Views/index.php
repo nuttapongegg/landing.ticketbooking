@@ -157,10 +157,10 @@
                                         <div id="status"></div>
                                         <div id="revenues"></div>
                                         <?php if (session()->get('session') ==  1) {
-                                                    $login = '<a href="javascript:void(0);" onclick="fbLogout();" id="fbLink"><div class="d-flex"><div class="me-2 mt-1"><span class="avatar"><img src="' . session()->get('picture') . '" alt="img" class="rounded-circle" style="width: 30px; height: 30px;"></span></div><div class="d-flex1 mt-2">Logout</div></div></a>';
-                                                } else {
-                                                    $login = '<a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a>';
-                                                } ?>
+                                            $login = '<a href="javascript:void(0);" onclick="fbLogout();" id="fbLink"><div class="d-flex"><div class="me-2 mt-1"><span class="avatar"><img src="' . session()->get('picture') . '" alt="img" class="rounded-circle" style="width: 30px; height: 30px;"></span></div><div class="d-flex1 mt-2">Logout</div></div></a>';
+                                        } else {
+                                            $login = '<a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a>';
+                                        } ?>
                                         <?php echo $login ?>
                                         <!-- <a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a> -->
                                         <!-- <a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a> -->
@@ -209,40 +209,43 @@
                                         if ($ticket->ticket_pcs_count_sale != 0) {
                                             $tickets_count = $ticket->ticket_pcs - $ticket->ticket_pcs_count_sale;
                                         } else {
-                                            
+
                                             $tickets_count = $ticket->ticket_pcs;
-                                           
                                         }
                                         ?>
-                                        <div class="col-12 col-lg-10 col-xl-7 col-xxl-8">
-                                            <div class="post-it mb-3" data-aos="fade-up">
-                                                <div class="inner py-1 px-3">
-                                                    <div class="row align-items-center">
-                                                        <div class="col">
-                                                            <p class="p text-left"><?php echo $ticket->ticket_name . ' ' . $ticket->ticket_detail . '&nbsp;บัตรคงเหลือ (' . $tickets_count . ' ใบ)&nbsp; ราคา&nbsp;(' . $ticket->ticket_price . ' บาท/ใบ)' ?></p>
-                                                        </div>
-                                                        <div class="col-auto">
-                                                            <p>
-                                                                <?php
-                                                                $id_user = '';
-                                                                $name_user = '';
-                                                                 if (session()->get('session') ==  1) {
-                                                                    $id_user = session()->get('userID');
-                                                                    $name_user = session()->get('username');
-                                                                    $test = 'onclick="buyTickets(this.id);"';
-                                                                } else {
-                                                                    $id_user = 0;
-                                                                    $name_user = 0;                                                                $name_user = session()->get('username');
-                                                                    $test = 'onclick="fbLogin();"';
-                                                                } ?>
-                                                                <a class="btn btn-main" href="javascript:void(0);" id="<?php echo $id_user . "###" . $name_user . "###" .  $ticket->id . "###" . $tickets_count . "###" .  $ticket->ticket_price ."###". $ticket->ticket_pcs_count_sale; ?>" <?php echo $test ?>><span>ซื้อบัตร</span></a>
-                                                                <!-- onclick="$app.popup.signin('https://www.thaiticketmajor.com/booking/1/zones.php?query=749&rdId=68987');" -->
-                                                            </p>
+                                        <?php $tickets_null = $ticket->ticket_pcs - $ticket->ticket_pcs_count_sale; ?>
+                                        <?php if ($tickets_null != 0) { ?>
+                                            <div class="col-12 col-lg-10 col-xl-7 col-xxl-8">
+                                                <div class="post-it mb-3" data-aos="fade-up">
+                                                    <div class="inner py-1 px-3">
+                                                        <div class="row align-items-center">
+                                                            <div class="col">
+                                                                <p class="p text-left"><?php echo $ticket->ticket_name . ' ' . $ticket->ticket_detail . '&nbsp;บัตรคงเหลือ (' . $tickets_count . ' ใบ)&nbsp; ราคา&nbsp;(' . $ticket->ticket_price . ' บาท/ใบ)' ?></p>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <p>
+                                                                    <?php
+                                                                    $id_user = '';
+                                                                    $name_user = '';
+                                                                    if (session()->get('session') ==  1) {
+                                                                        $id_user = session()->get('userID');
+                                                                        $name_user = session()->get('username');
+                                                                        $test = 'onclick="buyTickets(this.id);"';
+                                                                    } else {
+                                                                        $id_user = 0;
+                                                                        $name_user = 0;
+                                                                        $name_user = session()->get('username');
+                                                                        $test = 'onclick="fbLogin();"';
+                                                                    } ?>
+                                                                    <a class="btn btn-main" href="javascript:void(0);" id="<?php echo $id_user . "###" . $name_user . "###" .  $ticket->id . "###" . $tickets_count . "###" .  $ticket->ticket_price . "###" . $ticket->ticket_pcs_count_sale; ?>" <?php echo $test ?>><span>ซื้อบัตร</span></a>
+                                                                    <!-- onclick="$app.popup.signin('https://www.thaiticketmajor.com/booking/1/zones.php?query=749&rdId=68987');" -->
+                                                                </p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        <?php } ?>
                                     <?php } ?>
                                     <!-- <div class="col-12 col-lg-10 col-xl-7 col-xxl-8">
                                         <div class="post-it mb-3" data-aos="fade-up">
