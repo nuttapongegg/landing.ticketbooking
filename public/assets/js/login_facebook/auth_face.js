@@ -3,7 +3,7 @@ var name = "";
 var email = "";
 var picture = "";
 
-var appId = "551583096525485";  //FB App ID server
+var appId = '551583096525485';  //FB App ID server
 
 if(serverUrl === 'http://localhost:8080'){
     appId = '1126421014729295'; // FB App ID ของพี่มอส(1126421014729295), ของเอ้ก (476847497713912)
