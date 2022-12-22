@@ -28,9 +28,9 @@ class Deposit extends BaseController
             $bankSetting = $this->BankSettingModel->getBankSettingByBankTypeAndBankIDAndBankAccountNoAndStatusAndSystem('deposit', BANK_KBANK_ID, $inputBankAccountNo, 'on', 'SMS');
        
             // กรณี: หัวข้อความไม่ตรง
-            // if ($inputSender !== 'KBank') {
-            //     return;
-            // }
+            if ($inputSender !== '027777777') {
+                return;
+            }
 
             // กรณี: ไม่พบบัญชี
             if (!$bankSetting) {
