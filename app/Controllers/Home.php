@@ -10,4 +10,11 @@ class Home extends BaseController
         $data['tickets'] = $TicketsModel->getTicketsAll();
         return view('index', $data);
     }
+
+    public function policy()
+    {
+        // $TicketsModel = new \App\Models\TicketsModel();
+        // $data['tickets'] = $TicketsModel->getTicketsAll();
+        return view('policy');
+    }
 }

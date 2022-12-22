@@ -38,6 +38,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->post('login', 'Login::login');
 $routes->get('logout', 'Login::logout');
+$routes->get('policy', 'Home::policy');
 
 $routes->get('qrCancel', 'Deposit::cancelPromptPayQR');
 $routes->post('qrCreate', 'Deposit::generatePromptPayQR');
