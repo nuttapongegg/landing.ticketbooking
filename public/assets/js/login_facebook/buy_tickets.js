@@ -32,7 +32,9 @@ function buyTickets(id) {
     let null_text = $("#number_select").val();
     if (null_text == "" || null_text <= min) {
       alert("กรุณากรอกจำนวน");
-    } else {
+    } 
+    else
+     {
       let buy_ticket = $("#number_select").val();
       let count_tickets_in_stock_update =  parseInt(buy_ticket) + parseInt(count_tickets_in_stock_old);
       let price_sum = buy_ticket * tickets_price;

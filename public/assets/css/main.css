@@ -598,7 +598,7 @@ samp {
 
 code {
     font-size: 87.5%;
-    color: #e83e8c;
+    color: #6633CC;
     word-break: break-word
 }
 
@@ -12165,7 +12165,7 @@ strong {
 
 @media (max-width: 991.98px) {
     .main-header .main-nav {
-        background-color: rgba(215, 104, 137, 0.95);
+        background-color: rgba(102, 153, 255, 0.95);
         position: fixed;
         top: 0;
         left: 0;
@@ -13279,7 +13279,7 @@ strong {
 }
 
 .btn-main:not([disabled]) span {
-    background-color: #d76889;
+    background-color: #6666CC;
     color: #fff
 }
 
@@ -13302,7 +13302,7 @@ strong {
 }
 
 .btn-main:hover span {
-    background-color: #CF4770;
+    background-color: #6666FF;
     color: #fff
 }
 
@@ -13445,8 +13445,8 @@ strong {
 }
 
 .ticket-container h2 {
-    color: #d76889;
-    font-weight: 600
+    color: #6633CC;
+    font-weight: 900
 }
 
 .ticket-container .p {
@@ -13455,7 +13455,7 @@ strong {
 
 @media (max-width: 991.98px) {
     .ticket-container .p {
-        font-size: 1.05rem
+        font-size: 1.15rem
     }
 }
 
