@@ -89,9 +89,14 @@ class Deposit extends BaseController
             ]);
             if (!$updatePromptpayRefill) return;
 
+            //แก้ไขจำนวนที่ขาย
             $updateCountSale = $this->TicketsModel->updateTicketsByID($promptpayRefill->transaction_id, [
                     'ticket_pcs_count_sale' => $promptpayRefill->transaction_count
              ]);
+
+             if($updateCountSale){
+                // Line notification
+             }
 
             // เช็คว่ามียูสในระบบจริง ๆ หรือไม่
             // $member = $this->MemberModel->getMemberByID($promptpayRefill->member_id);
