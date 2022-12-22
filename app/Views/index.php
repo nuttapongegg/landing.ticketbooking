@@ -7,27 +7,27 @@
     <!-- <meta name="apple-mobile-web-app-capable" content="yes" /> -->
     <meta name="apple-mobile-web-app-title" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Official Ticket | BLACKPINK WORLD TOUR [BORN PINK] BANGKOK</title>
+    <title>Official Ticket | EVENS UP</title>
     <base href="">
-    <meta name="description" content="BLACKPINK WORLD TOUR [BORN PINK] BANGKOK" />
-    <meta name="keywords" content="BLACKPINK WORLD TOUR [BORN PINK] BANGKOK" />
-    <meta name="author" content="THAITICKETMAJOR" />
+    <meta name="description" content="Official Ticket | EVENS UP" />
+    <meta name="keywords" content="Official Ticket | EVENS UP" />
+    <meta name="author" content="UP DIGITAL" />
     <!-- meta for facebook -->
     <meta property="og:url" content="" />
-    <meta property="og:title" content="Official Ticket | BLACKPINK WORLD TOUR [BORN PINK] BANGKOK" />
-    <meta property="og:description" content="BLACKPINK WORLD TOUR [BORN PINK] BANGKOK" />
+    <meta property="og:title" content="Official Ticket | EVENS UP" />
+    <meta property="og:description" content="EVENS UP" />
     <meta property="og:image" content="#ffffff" />
     <meta property="article:publisher" content="" />
-    <meta property="article:author" content="THAITICKETMAJOR" />
+    <meta property="article:author" content="UP DIGITAL" />
     <meta property="og:site_name" content="" />
     <meta property="og:type" content="Website" />
     <meta property="fb:app_id" content="326324767913792" />
     <!-- meta for twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="" />
-    <meta name="twitter:creator" content="THAITICKETMAJOR" />
-    <meta name="twitter:title" content="Official Ticket | BLACKPINK WORLD TOUR [BORN PINK] BANGKOK" />
-    <meta name="twitter:description" content="BLACKPINK WORLD TOUR [BORN PINK] BANGKOK" />
+    <meta name="twitter:creator" content="EVENS UP" />
+    <meta name="twitter:title" content="Official Ticket | EVENS UP" />
+    <meta name="twitter:description" content="EVENS UP" />
     <meta name="twitter:image" content="#ffffff" />
     <!--  Bootstrap css-->
     <link id="style" href="<?php echo base_url('/assets/plugins/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" />
@@ -80,22 +80,22 @@
 <body>
     <script src="<?php echo base_url('assets/js/login_facebook/auth_face.js'); ?>"></script>
     <script>
-        function setLang(la) {
-            if ($.cookie('__la') != undefined) {
-                $.removeCookie('__la');
-            }
-            $.cookie('__la', la, {
-                expires: 7,
-                path: '/',
-                domain: '.thaiticketmajor.com'
-            });
-            location.reload();
-        }
+        // function setLang(la) {
+        //     if ($.cookie('__la') != undefined) {
+        //         $.removeCookie('__la');
+        //     }
+        //     $.cookie('__la', la, {
+        //         expires: 7,
+        //         path: '/',
+        //         domain: '.thaiticketmajor.com'
+        //     });
+        //     location.reload();
+        // }
     </script>
     <script>
         var $meta = {
             url: '',
-            title: 'Official Ticket | BLACKPINK WORLD TOUR [BORN PINK] BANGKOK'
+            title: 'Official Ticket | EVENS UP'
         }
     </script>
     <div class="main">
@@ -111,7 +111,7 @@
                                 </a>
                             </div>
                             <a class="main-logo col-auto" role="logo" title="logo">
-                                <img src="assets/img/ttm-logo-txt-white.png" alt="THAITICKETMAJOR : Thailand Ticket Center">
+                                <img src="assets/img/ttm-logo-txt-white.png" alt="EVENS UP">
                             </a>
                             <nav class="main-nav col" role="navigation">
                                 <div class="row">
@@ -120,9 +120,15 @@
                                         <li><a href="#ticket" class="menu-anchor">ซื้อบัตร</a></li>
                                         <li><a href="#detail" class="menu-anchor">รายละเอียด</a></li>
                                         <li class="d-block d-lg-none py-0">
-                                            <div class="my-3">
+                                            <!-- <div class="my-3">
                                                 <a class="btn-signin btn-block" href="javascript:void(0);" onclick="$app.popup.signin();">เข้าสู่ระบบ</a>
-                                            </div>
+                                            </div> -->
+                                            <?php if (session()->get('session') ==  1) {
+                                            $login = '<a href="javascript:void(0);" onclick="fbLogout();" id="fbLink"><div class="d-flex justify-content-center"><div class="me-2 mt-1"><span class="avatar"><img src="' . session()->get('picture') . '" alt="img" class="rounded-circle" style="width: 30px; height: 30px;"></span></div><div class="d-flex1 mt-2">ออกจากระบบ</div></div></a>';
+                                        } else {
+                                            $login = '<a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a>';
+                                        } ?>
+                                        <?php echo $login ?>
                                         </li>
                                     </ul>
                                 </div>
@@ -157,7 +163,7 @@
                                         <div id="status"></div>
                                         <div id="revenues"></div>
                                         <?php if (session()->get('session') ==  1) {
-                                            $login = '<a href="javascript:void(0);" onclick="fbLogout();" id="fbLink"><div class="d-flex"><div class="me-2 mt-1"><span class="avatar"><img src="' . session()->get('picture') . '" alt="img" class="rounded-circle" style="width: 30px; height: 30px;"></span></div><div class="d-flex1 mt-2">Logout</div></div></a>';
+                                            $login = '<a href="javascript:void(0);" onclick="fbLogout();" id="fbLink"><div class="d-flex justify-content-center"><div class="me-2 mt-1"><span class="avatar"><img src="' . session()->get('picture') . '" alt="img" class="rounded-circle" style="width: 30px; height: 30px;"></span></div><div class="d-flex1 mt-2">ออกจากระบบ</div></div></a>';
                                         } else {
                                             $login = '<a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a>';
                                         } ?>
@@ -181,7 +187,7 @@
                 </picture>
             </section>
             <div class="overlay-container">
-                <section class="mt-3 mt-lg-0">
+                <!-- <section class="mt-3 mt-lg-0">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-12 col-lg-10">
@@ -195,7 +201,7 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> -->
                 <section class="section-anchor pt-0 pt-lg-3" id="ticket">
                     <div class="container pt-5 pb-0 pb-lg-5 ticket-container">
                         <div class="row justify-content-center">
