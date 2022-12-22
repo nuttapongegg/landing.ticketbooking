@@ -118,7 +118,7 @@
                                     <ul class="main-menu col">
                                         <li><a href="#intro" class="menu-anchor active">หน้าหลัก</a></li>
                                         <li><a href="#ticket" class="menu-anchor">ซื้อบัตร</a></li>
-                                        <li><a href="#detail" class="menu-anchor">รายละเอียด</a></li>
+                                        <!-- <li><a href="#detail" class="menu-anchor">รายละเอียด</a></li> -->
                                         <li class="d-block d-lg-none py-0">
                                             <!-- <div class="my-3">
                                                 <a class="btn-signin btn-block" href="javascript:void(0);" onclick="$app.popup.signin();">เข้าสู่ระบบ</a>
