@@ -11,7 +11,6 @@ function buyTickets(id) {
   var count_tickets_in_stock_old = str_split_result[5];
 
 
-  
 
 
   $("#numlabel").html(
@@ -63,6 +62,32 @@ function buyTickets(id) {
 
             $(".btnCancel").text("ปิด");
             $(".btnSave").css("display", "none");
+
+            var timerId = setInterval(countdown, 1000);
+            var timeLeft = 30;
+
+              function countdown() {
+                if (timeLeft == -1) {
+                  clearTimeout(timerId);
+                  // ทำอะไร
+                  $("#modalChoose_Number").modal("hide");
+                  $('#number_select').val('');
+                  $("#QR_code").html('<div style="display: flex; justify-content: center;" id="QR_code"></div>');
+          
+                  $.ajax({
+                      type: 'get',
+                      url: '/qrCancel',
+                      contentType: 'application/json; charset=utf-8;',
+                      processData: false,
+                  });
+
+                  window.location.reload();
+
+                } else {
+                  $(".btnCancel").text("ปิด (" + timeLeft + ")");
+                  timeLeft--;
+                }
+              }
           }
         },
       });
