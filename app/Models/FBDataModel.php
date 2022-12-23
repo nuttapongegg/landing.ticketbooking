@@ -43,6 +43,13 @@ class FBDataModel
         return $builder->where('id', $id)->get()->getRow();
     }
 
+    public function getFBDataByFBID($id)
+    {
+        $builder = $this->db->table('fb_data');
+
+        return $builder->where('fb_id', $id)->get()->getRow();
+    }
+
     public function insertFBData($data)
     {
         $builder = $this->db->table('fb_data');
