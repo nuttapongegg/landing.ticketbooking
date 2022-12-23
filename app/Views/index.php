@@ -246,7 +246,7 @@
                                                                         $name_user = session()->get('username');
                                                                         $test = 'onclick="fbLogin();"';
                                                                     } ?>
-                                                                    <a class="btn btn-main" href="javascript:void(0);" id="<?php echo $id_user . "###" . $name_user . "###" .  $ticket->id . "###" . $tickets_count . "###" .  $ticket->ticket_price . "###" . $ticket->ticket_pcs_count_sale; ?>" <?php echo $test ?>><span>ซื้อบัตร</span></a>
+                                                                    <a class="btn btn-main sale-list" href="javascript:void(0);" id="<?php echo $id_user . "###" . $name_user . "###" .  $ticket->id . "###" . $tickets_count . "###" .  $ticket->ticket_price . "###" . $ticket->ticket_pcs_count_sale; ?>" <?php echo $test ?>><span>ซื้อบัตร</span></a>
                                                                     <!-- onclick="$app.popup.signin('https://www.thaiticketmajor.com/booking/1/zones.php?query=749&rdId=68987');" -->
                                                                 </p>
                                                             </div>
