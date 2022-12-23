@@ -13,7 +13,6 @@ window.fbAsyncInit = function() {
     // FB JavaScript SDK configuration and setup
     FB.init({
       appId      : appId, 
-      cookie     : true,  // enable cookies to allow the server to access the session
       xfbml      : true,  // parse social plugins on this page
       version    : 'v15.0' // use graph api version 2.8
     });
@@ -100,7 +99,7 @@ function fbLogout() {
         document.getElementById('fbLink').innerHTML = '<i class="fa fa-facebook-square"  style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook';
         document.getElementById('userData').innerHTML = '';
         document.getElementById('status').innerHTML = '';
-        
+
         window.location = '/'
     // });
 }
