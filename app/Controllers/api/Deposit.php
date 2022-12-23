@@ -99,8 +99,43 @@ class Deposit extends BaseController
 
              if($updateCountSale){
             
-                // Line notification
-             }
+                // // Line notification
+                // $Message_Nofity = '';
+                // // $Image_Nofity = '';
+                // $Message_Nofity = session()->get('username') . "\n" . 'ทำการซื้อบัตรคอนเสิร์ต';
+                // // $Message_Nofity = session()->get('username') . "\n" . 'ทำการเปลี่ยนสถานะเอกสาร' . "\n" . 'จาก ' . $booking->status . ' เป็น ' .
+                // //     $data_Booking_Day[0]->status . "\n" . 'เอกสารของคุณ ' . $data_Booking_Day[0]->customer_title . "\n" . 'ทำการซื้อรถ ' .
+                // //     $data_Booking_Day[0]->car_stock_title . "\n" . 'กับพนักงานชื่อ ' . $data_Booking_Day[0]->employee_title;
+
+                // // $token = $nofity_Day->notify_line_token_status;
+                // $token = 'SttYDqXqhNiwoiCDDFzVxCke62UdtcJxoR5660bm9P5'; // LINE Token
+                // //Message
+                // $mymessage = $Message_Nofity;
+                // $data = array(
+                //     'message' => $mymessage,
+                // );
+                // $chOne = curl_init();
+                // curl_setopt($chOne, CURLOPT_URL, "https://notify-api.line.me/api/notify");
+                // curl_setopt($chOne, CURLOPT_SSL_VERIFYHOST, 0);
+                // curl_setopt($chOne, CURLOPT_SSL_VERIFYPEER, 0);
+                // curl_setopt($chOne, CURLOPT_POST, 1);
+                // curl_setopt($chOne, CURLOPT_POSTFIELDS, $data);
+                // curl_setopt($chOne, CURLOPT_FOLLOWLOCATION, 1);
+                // $headers = array('Content-type: multipart/form-data', 'Authorization: Bearer ' . $token,);
+                // curl_setopt($chOne, CURLOPT_HTTPHEADER, $headers);
+                // curl_setopt($chOne, CURLOPT_RETURNTRANSFER, 1);
+                // $result = curl_exec($chOne);
+                // //Check error
+                // if (curl_error($chOne)) {
+                //     echo 'error:' . curl_error($chOne);
+                // } else {
+                //     $result_ = json_decode($result, true);
+                //     echo "status : " . $result_['status'];
+                //     echo "message : " . $result_['message'];
+                // }
+                // //Close connection
+                // curl_close($chOne);
+            }
 
             // เช็คว่ามียูสในระบบจริง ๆ หรือไม่
             // $member = $this->MemberModel->getMemberByID($promptpayRefill->member_id);
