@@ -127,9 +127,9 @@
                                                 <a class="btn-signin btn-block" href="javascript:void(0);" onclick="$app.popup.signin();">เข้าสู่ระบบ</a>
                                             </div> -->
                                             <?php if (session()->get('session') ==  1) {
-                                                $login = '<a href="javascript:void(0);" onclick="fbLogout();" id="fbLink"><div class="d-flex justify-content-center"><div class="me-2 mt-1"><span class="avatar"><img src="' . session()->get('picture') . '" alt="img" class="rounded-circle" style="width: 30px; height: 30px;"></span></div><div class="d-flex1 mt-2">ออกจากระบบ</div></div></a>';
+                                                $login = '<a href="javascript:void(0);" onclick="fbLogout();" id="fbLink2"><div class="d-flex justify-content-center"><div class="me-2 mt-1"><span class="avatar"><img src="' . session()->get('picture') . '" alt="img" class="rounded-circle" style="width: 30px; height: 30px;"></span></div><div class="d-flex1 mt-2">ออกจากระบบ</div></div></a>';
                                             } else {
-                                                $login = '<a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a>';
+                                                $login = '<a href="javascript:void(0);" onclick="fbLogin();" id="fbLink2"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a>';
                                             } ?>
                                             <?php echo $login ?>
                                         </li>
@@ -166,9 +166,9 @@
                                         <div id="status"></div>
                                         <div id="revenues"></div>
                                         <?php if (session()->get('session') ==  1) {
-                                            $login = '<a href="javascript:void(0);" onclick="fbLogout();" id="fbLink"><div class="d-flex justify-content-center"><div class="me-2 mt-1"><span class="avatar"><img src="' . session()->get('picture') . '" alt="img" class="rounded-circle" style="width: 30px; height: 30px;"></span></div><div class="d-flex1 mt-2">ออกจากระบบ</div></div></a>';
+                                            $login = '<a href="javascript:void(0);" onclick="fbLogout();" id="fbLink1"><div class="d-flex justify-content-center"><div class="me-2 mt-1"><span class="avatar"><img src="' . session()->get('picture') . '" alt="img" class="rounded-circle" style="width: 30px; height: 30px;"></span></div><div class="d-flex1 mt-2">ออกจากระบบ</div></div></a>';
                                         } else {
-                                            $login = '<a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a>';
+                                            $login = '<a href="javascript:void(0);" onclick="fbLogin();" id="fbLink1"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a>';
                                         } ?>
                                         <?php echo $login ?>
                                         <!-- <a href="javascript:void(0);" onclick="fbLogin();" id="fbLink"><i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook</a> -->

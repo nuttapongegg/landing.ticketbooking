@@ -71,8 +71,11 @@ function getFbUserData() {
                 processData: false,
                 data: JSON.stringify(dataObj),
             }),
-            document.getElementById('fbLink').setAttribute("onclick", "fbLogout()");
-            document.getElementById('fbLink').innerHTML = '<div class="d-flex"> <div class="mt-1"> <span class="avatar"> <img src="' + response.picture.data.url + '" alt="img" class="rounded-circle" style="width: 30px; height: 30px;"></span></div><div class="d-flex1 mt-2">&nbsp; <a>Logout </a></div></div> '; // from Facebook
+            
+            document.getElementById('fbLink1').setAttribute("onclick", "fbLogout()");
+            document.getElementById('fbLink1').innerHTML = '<div class="d-flex"> <div class="mt-1"> <span class="avatar"> <img src="' + response.picture.data.url + '" alt="img" class="rounded-circle" style="width: 30px; height: 30px;"></span></div><div class="d-flex1 mt-2">&nbsp; <a>Logout </a></div></div> '; // from Facebook
+            document.getElementById('fbLink2').setAttribute("onclick", "fbLogout()");
+            document.getElementById('fbLink2').innerHTML = '<div class="d-flex"> <div class="mt-1"> <span class="avatar"> <img src="' + response.picture.data.url + '" alt="img" class="rounded-circle" style="width: 30px; height: 30px;"></span></div><div class="d-flex1 mt-2">&nbsp; <a>Logout </a></div></div> '; // from Facebook
             // document.getElementById('fbLink').innerHTML = '<i class="fa fa-facebook-square" style="font-size:24px" id="'+id+'" aria-hidden="true"></i> Logout Facebook'; // from Facebook
             // document.getElementById('fbLink').setAttribute("onclick","fbLogout()");//<i class="fa fa-facebook-square" style="font-size:24px" aria-hidden="true"></i>
             // document.getElementById('fbLink').innerHTML = '<div class="d-flex"> <div class="me-3 mt-1"> <span class="avatar"> <img src="'+response.picture.data.url+'" alt="img" class="rounded-circle"></span></div><div class="d-flex1 mt-3">&nbsp; <a>Logout Facebook</a></div></div> '; // from Facebook
@@ -96,8 +99,10 @@ function fbLogout() {
             type: 'GET',
             url: '/logout',
         }),
-        document.getElementById('fbLink').setAttribute("onclick", "fbLogin()");
-        document.getElementById('fbLink').innerHTML = '<i class="fa fa-facebook-square"  style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook';
+        document.getElementById('fbLink1').setAttribute("onclick", "fbLogin()");
+        document.getElementById('fbLink1').innerHTML = '<i class="fa fa-facebook-square"  style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook';
+        document.getElementById('fbLink2').setAttribute("onclick", "fbLogin()");
+        document.getElementById('fbLink2').innerHTML = '<i class="fa fa-facebook-square"  style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook';
         document.getElementById('userData').innerHTML = '';
         document.getElementById('status').innerHTML = '';
 
