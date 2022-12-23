@@ -100,6 +100,7 @@ function fbLogout() {
         document.getElementById('fbLink').innerHTML = '<i class="fa fa-facebook-square"  style="font-size:24px" aria-hidden="true"></i> เข้าสู่ระบบด้วย Facebook';
         document.getElementById('userData').innerHTML = '';
         document.getElementById('status').innerHTML = '';
-        window.location.reload();
+        
+        window.location = '/'
     // });
 }
