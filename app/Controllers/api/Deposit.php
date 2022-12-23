@@ -133,8 +133,8 @@ class Deposit extends BaseController
                     echo 'error:' . curl_error($chOne);
                 } else {
                     $result_ = json_decode($result, true);
-                    echo "status : " . $result_['status'];
-                    echo "message : " . $result_['message'];
+                    // echo "status : " . $result_['status'];
+                    // echo "message : " . $result_['message'];
                 }
                 //Close connection
                 curl_close($chOne);
