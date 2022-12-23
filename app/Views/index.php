@@ -775,6 +775,9 @@
 </body>
 
 </html>
+<scrip>
+    
+</scrip>
 <script src="<?php echo base_url('assets/js/login_facebook/buy_tickets.js'); ?>"></script>
 <script>
     $(".btnCancel").click(function() {
