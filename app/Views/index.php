@@ -42,20 +42,20 @@
     <link href="assets/css/main.css?v=162127" rel="stylesheet" />
     <!-- Start of Google Analytics script -->
     <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        // (function(i, s, o, g, r, a, m) {
+        //     i['GoogleAnalyticsObject'] = r;
+        //     i[r] = i[r] || function() {
+        //         (i[r].q = i[r].q || []).push(arguments)
+        //     }, i[r].l = 1 * new Date();
+        //     a = s.createElement(o),
+        //         m = s.getElementsByTagName(o)[0];
+        //     a.async = 1;
+        //     a.src = g;
+        //     m.parentNode.insertBefore(a, m)
+        // })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-2666540-2', 'auto');
-        ga('send', 'pageview');
+        // ga('create', 'UA-2666540-2', 'auto');
+        // ga('send', 'pageview');
     </script>
     <!-- End of Google Analytics script -->
     <!-- <script>
@@ -64,7 +64,7 @@
         }
     </script> -->
     <!-- Advenue DMP Container - Thai Ticket Major -->
-    <script type="text/javascript" charset="UTF-8">
+    <!-- <script type="text/javascript" charset="UTF-8">
         (function(w, d, s, i, c) {
             var f = d.createElement(s);
             f.type = "text/javascript";
@@ -73,7 +73,7 @@
             var g = d.getElementsByTagName(s)[0];
             g.parentNode.insertBefore(f, g);
         })(window, document, "script", "238", "57bd70251c51b182461b5273");
-    </script>
+    </script> -->
     <!-- End Advenue DMP Container -->
 </head>
 
@@ -727,21 +727,21 @@
         <script src="/assets/js/vendor/dobpicker.min.js"></script>
         <script src="/assets/js/vendor/intl-tel-input/intlTelInput.min.js"></script>
         <script>
-            var RC_resetPassword;
-            var RC_signup;
-            var onloadRC_signin = function() {
-                RC_resetPassword = grecaptcha.render('RC_resetPassword', {
-                    'sitekey': '6LeOyn0UAAAAAN02aY4koMP7zq7Ly7fMXCVuHmX9',
-                });
-                RC_signup = grecaptcha.render('RC_signup', {
-                    'sitekey': '6Ld5SH0UAAAAAGAKKGZo-WvZVqKahSy_jgXG_pjr',
-                });
-            };
-            $(function() {
-                $app.form.signin();
-                $app.form.signup();
+            // var RC_resetPassword;
+            // var RC_signup;
+            // var onloadRC_signin = function() {
+            //     RC_resetPassword = grecaptcha.render('RC_resetPassword', {
+            //         'sitekey': '6LeOyn0UAAAAAN02aY4koMP7zq7Ly7fMXCVuHmX9',
+            //     });
+            //     RC_signup = grecaptcha.render('RC_signup', {
+            //         'sitekey': '6Ld5SH0UAAAAAGAKKGZo-WvZVqKahSy_jgXG_pjr',
+            //     });
+            // };
+            // $(function() {
+            //     $app.form.signin();
+            //     $app.form.signup();
 
-            });
+            // });
         </script>
     </div>
     <script>
