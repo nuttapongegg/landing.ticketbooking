@@ -51,9 +51,10 @@ function fbLogin() {
 
 // Fetch the user profile data from facebook
 function getFbUserData() {
+    console.log("get User DATA");
     FB.api('/me', { locale: 'en_US', fields: 'id,first_name,last_name,email,link,gender,locale,picture' },
         function (response) {
-
+            console.log("get User DATA WORK : " + response);
             let id = response.id
             let name = response.first_name + ' ' + response.last_name
             let email = response.email
