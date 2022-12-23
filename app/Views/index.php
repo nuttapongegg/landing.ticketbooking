@@ -761,6 +761,7 @@
                                 <input type="number" class="form-control" oninput="this.value = Math.round(this.value);" id="number_select" name="number_select">
                             </div>
                             <div style="display: flex; justify-content: center;" id="QR_code"></div>
+                            <div style="display: flex; justify-content: center;" id="QR_price"></div>
                         </div>
                         <div style="display: flex; justify-content: center;">
                             <button class="btn btn-warning mr-3 btnCancel" type="button">ยกเลิก</button>

@@ -53,6 +53,7 @@ function buyTickets(id) {
         processData: false,
         data: JSON.stringify(dataObj),
         success: function (response) {
+          console.log(response.data);
           if (response.message == "กรุณาลองใหม่อีกครั้งหลัง 1 นาที") {
             alert("กรุณาลองใหม่อีกครั้งหลัง 1 นาที");
           } else {
@@ -61,6 +62,8 @@ function buyTickets(id) {
                 response.data.qrcode +
                 "&chs=160x160&chld=L|0' class='qr-code img-thumbnail img-responsive' />"
             );
+
+            $('#QR_price').html("<div style='align: center;'>"+response.data.amount_format+" บาท</div>");
 
             $(".btnCancel").text("ปิด");
             $(".btnSave").css("display", "none");
