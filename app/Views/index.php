@@ -81,7 +81,7 @@
     <script>
         var serverUrl = '<?php echo base_url(); ?>';
     </script>
-    <script src="<?php echo base_url('assets/js/login_facebook/auth_face.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/js/login_facebook/auth_face.js?v=' . time()); ?>"></script>
     <script>
         // function setLang(la) {
         //     if ($.cookie('__la') != undefined) {
@@ -778,7 +778,7 @@
 <scrip>
 
 </scrip>
-<script src="<?php echo base_url('assets/js/login_facebook/buy_tickets.js'); ?>"></script>
+<script src="<?php echo base_url('assets/js/login_facebook/buy_tickets.js?v=' . time()); ?>"></script>
 <script>
     $(".btnCancel").click(function() {
         $('#modalChoose_Number').modal('hide');
