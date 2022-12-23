@@ -18,7 +18,7 @@ window.fbAsyncInit = function() {
       version    : 'v15.0' // use graph api version 2.8
     });
 
-    FB.AppEvents.logPageView(); 
+    // FB.AppEvents.logPageView(); 
     // Check whether the user already logged in
     FB.getLoginStatus(function (response) {
         if (response.status === 'connected') {
