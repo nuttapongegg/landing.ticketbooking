@@ -47,6 +47,7 @@ class Deposit extends BaseController
             // 06/12/65 17:29 บช X-5109 รับโอนจาก X-0100 5.20 คงเหลือ 10.30 บ.|(กสิกรโอนเข้ามา)
 
             // http://localhost:8080/api/deposit/sms-promptpay-kbank?bank_account_no=เลขพร้อมเพย์&tag=TAGที่ลงทะเบียนไว้ในระบบ&sender=Kbank&message=
+            //https://eventups.com/api/deposit/sms-promptpay-kbank?bank_account_no=เลขพร้อมเพย์&tag=TAGที่ลงทะเบียนไว้ในระบบ&sender=027777777&message=
 
             $isOtherBank = preg_match("/(*UTF8)(\d{2}\/\d{2}\/\d{2})\s(\d{2}:\d{2})\sบช\sX-\d+\sเงินเข้า\s(.*?)\sคงเหลือ\s(.*)\sบ\./", $message, $messages);
             if (!$isOtherBank) preg_match("/(*UTF8)(\d{2}\/\d{2}\/\d{2})\s(\d{2}:\d{2})\sบช\sX-\d+\sรับโอนจาก\sX-\d+\s(.*?)\sคงเหลือ\s(.*)\sบ\./", $message, $messages);
