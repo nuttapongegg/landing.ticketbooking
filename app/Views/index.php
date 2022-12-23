@@ -776,7 +776,7 @@
 
 </html>
 <scrip>
-    
+
 </scrip>
 <script src="<?php echo base_url('assets/js/login_facebook/buy_tickets.js'); ?>"></script>
 <script>
@@ -791,5 +791,6 @@
             contentType: 'application/json; charset=utf-8;',
             processData: false,
         });
+        window.location.reload();
     });
 </script>
