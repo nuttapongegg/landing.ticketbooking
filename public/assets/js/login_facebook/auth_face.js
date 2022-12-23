@@ -81,7 +81,7 @@ function getFbUserData() {
             
         });
 
-     window.location.reload();
+    //  window.location.reload();
 }
 
 // Logout from facebook
