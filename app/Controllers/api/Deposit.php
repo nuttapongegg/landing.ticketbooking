@@ -99,19 +99,21 @@ class Deposit extends BaseController
              ]);
 
              if($updateCountSale){
+                $FBDataModel = new \App\Models\FBDataModel();
+                $FBData = $FBDataModel->getFBDataByID($promptpayRefill->member_id);
                 $dataTickets = $this->TicketsModel->getTicketsByID($promptpayRefill->transaction_id);
                 // Line notification
                 $sumprice = $dataTickets->ticket_price * $promptpayRefill->transaction_count;
                 $Message_Nofity = '';
                 // $Image_Nofity = '';
-                $Message_Nofity = session()->get('username') . "\n" . 'ทำการซื้อบัตรคอนเสิร์ต ' . $dataTickets->ticket_name. ' จำนวน ' .$promptpayRefill->transaction_count.
+                $Message_Nofity = $FBData->fb_name . "\n" . 'ทำการซื้อบัตรคอนเสิร์ต ' . $dataTickets->ticket_name. ' จำนวน ' .$promptpayRefill->transaction_count.
                 ' ใบ ราคา '.$sumprice.' บาท';
                 // $Message_Nofity = session()->get('username') . "\n" . 'ทำการเปลี่ยนสถานะเอกสาร' . "\n" . 'จาก ' . $booking->status . ' เป็น ' .
                 //     $data_Booking_Day[0]->status . "\n" . 'เอกสารของคุณ ' . $data_Booking_Day[0]->customer_title . "\n" . 'ทำการซื้อรถ ' .
                 //     $data_Booking_Day[0]->car_stock_title . "\n" . 'กับพนักงานชื่อ ' . $data_Booking_Day[0]->employee_title;
 
                 // $token = $nofity_Day->notify_line_token_status;
-                $token = 'FcXOayjLo5wEbxSI9nGPwF3BK0nenNhyR5fxGOEKfAC'; // LINE Token
+                $token = LINE_NOTIFY_TOKEN; // LINE Token
                 //Message
                 $mymessage = $Message_Nofity;
                 $data = array(
