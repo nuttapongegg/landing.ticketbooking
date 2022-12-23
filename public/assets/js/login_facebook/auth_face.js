@@ -42,7 +42,6 @@ function fbLogin() {
         if (response.authResponse) {
             // Get and display the user profile data
             getFbUserData();
-            window.location.reload();
         } else {
             document.getElementById('status').innerHTML = 'User cancelled login or did not fully authorize.';
         }
