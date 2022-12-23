@@ -612,24 +612,24 @@
         <footer class="main-footer">
             <div class="footer-container container">
                 <div class="row">
-                    <div class="col-12 col-lg-3 col-xl-4 d-none d-lg-block">
-                        <address class="box-address">
+                    <div class="col-12 col-lg-4 col-xl-4 d-none d-lg-block" style="text-align: center;">
+                        <!-- <address class="box-address"> -->
                             <a class="ttm-logo" href="/">
-                                <img src="https://www.thaiticketmajor.com/assets/img/ttm-logo-dark.png" alt="THAITICKETMAJOR" />
+                            <img src="../assets/img/ttm-logo-dark.png" alt="tickets" />
                             </a>
                             <p>
-                                <span class="txtMed">บริษัท ไทยทิคเก็ตเมเจอร์ จำกัด</span>
+                                <span class="txtMed">บริษัท อีสานนครสิลป์ จำกัด</span>
                             </p>
-                            <p>
+                            <!-- <p>
                                 3199 อาคารมาลีนนท์ทาวเวอร์ ชั้น 27, ถนนพระราม 4,<br>
                                 แขวงคลองตัน, เขตคลองเตย, กรุงเทพฯ 10110 </p>
-                            <p>
-                                โทร : 02-262-3456 <br>
-                                อีเมล : <a href="mailto:cs@thaiticketmajor.com">cs@thaiticketmajor.com</a>
+                            <p> -->
+                                โทร : 093-465-8509 <br>
+                                <!-- อีเมล : <a href="mailto:cs@thaiticketmajor.com">cs@thaiticketmajor.com</a> -->
                             </p>
-                        </address>
+                        <!-- </address> -->
                     </div>
-                    <div class="col-12 col-lg-2">
+                    <!-- <div class="col-12 col-lg-2">
                         <div class="menu-group">
                             <h3 class="menu-head">ไทยทิคเก็ตเมเจอร์</h3>
                             <ul class="menu-list">
@@ -640,20 +640,19 @@
                                 <li class="menu-item"><a target="_blank" href="/job.php" title="ร่วมงานกับเรา">ร่วมงานกับเรา</a></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-2">
+                    </div> -->
+                    <div class="col-12 col-lg-5">
                         <div class="menu-group">
-                            <h3 class="menu-head">บริการ</h3>
+                            <h2 class="menu-head">ช่องทางการติดตามผลงาน</h2>
                             <ul class="menu-list">
-                                <li class="menu-item"><a href="/all-event/" title="งานแสดง">ทุกงานแสดง</a></li>
-                                <li class="menu-item"><a target="_blank" href="/travel/" title="ท่องเที่ยว & การเดินทาง">ท่องเที่ยว & การเดินทาง</a></li>
-                                <li class="menu-item"><a target="_blank" href="http://shopping.thaiticketmajor.com/" title="ช็อปปิ้ง">สินค้าที่ระลึก</a></li>
-                                <li class="menu-item"><a target="_blank" href="/variety/" title="ข่าวสาร">วาไรตี้</a></li>
-                                <li class="menu-item"><a href="/promotion/" title="โปรโมชั่น">โปรโมชั่น</a></li>
+                                <li class="menu-item mb-2"><a href="javascript:void(0);" title="facebook">facebook : หมอลำอีสารนครศิลป์ แฟนเพจ</a></li>
+                                <li class="menu-item mb-2"><a href="javascript:void(0);" title="instagram">instagram : Isannewgen_brand888</a></li>
+                                <li class="menu-item mb-2"><a href="javascript:void(0);" title="youtube">youtube : คณะหมอลำอีสารนครศิลป์ official</a></li>
+                                <li class="menu-item mb-2"><a href="javascript:void(0);" title="tiktok">tiktok : หมอลำอีสารนครศิลป์</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-2">
+                    <!-- <div class="col-12 col-lg-3">
                         <div class="menu-group">
                             <h3 class="menu-head">ช่วยเหลือ</h3>
                             <ul class="menu-list">
@@ -664,31 +663,26 @@
                                 <li class="menu-item"><a href="/regis/unsub.htm" title="สมัคร/ยกเลิกรับข่าวสาร">สมัคร/ยกเลิกรับข่าวสาร</a></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-3 col-xl-2">
+                    </div> -->
+                    <div class="col-12 col-lg-3 col-xl-3">
                         <div class="contact-group">
                             <p>
                                 <span class="d-inline-block d-lg-block">
-                                    <small class="d-none d-lg-block">โทร</small>
+                                    <span class="d-none d-lg-block">ติดต่องานแสดง/โฆษณา</span>
                                     <i class="fa fa-phone d-inline-block d-lg-none" aria-hidden="true"></i>
-                                    <span class="txt-callcenter"><a href="tel:022623456">02-262-3456</a></span>
+                                    <span class="txt-callcenter"><a>093-465-8509</a></span>
                                 </span>
-                                <span class="d-inline-block d-lg-none">
+                                <!-- <span class="d-inline-block d-lg-none">
                                     <i class="fa fa-envelope ml-1" aria-hidden="true"></i>
                                     <span><a href="mailto:callcenter@thaiticketmajor.com">callcenter@thaiticketmajor.com</a></span>
-                                </span>
+                                </span> -->
                             </p>
                             <p class="box-social">
-                                <a class="item" title="Facbook Fanpage" href="https://www.facebook.com/ThaiTicketMajor" target="_blank"><img src="https://www.thaiticketmajor.com/assets/img/icon/facebook-circle.svg" alt="Facebook" /></a>
-                                <a class="item" title="Twitter" href="https://twitter.com/#!/ThaiTicketMajor" target="_blank"><img src="https://www.thaiticketmajor.com/assets/img/icon/twitter-circle.svg" alt="Twitter" /></a>
-                                <a class="item" title="Line" href="https://line.me/R/ti/p/%40gaw9520p" target="_blank"><img src="https://www.thaiticketmajor.com/assets/img/icon/line-circle.svg" alt="Line" /></a>
-                                <a class="item" title="Instagram" href="https://instagram.com/thaiticketmajor" target="_blank"><img src="https://www.thaiticketmajor.com/assets/img/icon/instagram-circle.svg" alt="Instagram" /></a>
-                                <a class="item" title="Youtube" href="https://www.youtube.com/channel/UCIIP01HQDYGpc4qxNsqTMjw" target="_blank"><img src="https://www.thaiticketmajor.com/assets/img/icon/youtube-circle.svg" alt="Youtube" /></a>
-                            </p>
-                            <p>
-                                <small class="copyright">
-                                    &copy; 2022 <a href="/">ไทยทิคเก็ตเมเจอร์</a>
-                                </small>
+                                <a class="item" title="Facbook Fanpage" href="javascript:void(0);" target="_blank"><img src="https://www.thaiticketmajor.com/assets/img/icon/facebook-circle.svg" alt="Facebook" /></a>
+                                <a class="item" title="Twitter" href="javascript:void(0);" target="_blank"><img src="https://www.thaiticketmajor.com/assets/img/icon/twitter-circle.svg" alt="Twitter" /></a>
+                                <a class="item" title="Line" href="javascript:void(0);" target="_blank"><img src="https://www.thaiticketmajor.com/assets/img/icon/line-circle.svg" alt="Line" /></a>
+                                <a class="item" title="Instagram" href="javascript:void(0);" target="_blank"><img src="https://www.thaiticketmajor.com/assets/img/icon/instagram-circle.svg" alt="Instagram" /></a>
+                                <a class="item" title="Youtube" href="javascript:void(0);" target="_blank"><img src="https://www.thaiticketmajor.com/assets/img/icon/youtube-circle.svg" alt="Youtube" /></a>
                             </p>
                         </div>
                     </div>
