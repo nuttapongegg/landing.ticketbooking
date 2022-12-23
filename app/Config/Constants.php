@@ -99,6 +99,7 @@ defined('ERROR_CODE_INVALID')                    || define('ERROR_CODE_INVALID',
 defined('BANK_KBANK_ID')                         || define('BANK_KBANK_ID', 1);
 
 defined('TITLE_SENDER_SCB')                         || define('TITLE_SENDER_SCB', '027777777');
+defined('TITLE_SENDER_KBANK')                         || define('TITLE_SENDER_KBANK', 'Kbank');
 
 defined('BANK_SETTING_PROMPTPAY_STATUS_ON')      || define('BANK_SETTING_PROMPTPAY_STATUS_ON', 'on');
 defined('BANK_SETTING_PROMPTPAY_STATUS_OFF')     || define('BANK_SETTING_PROMPTPAY_STATUS_OFF', 'off');
