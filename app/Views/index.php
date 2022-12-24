@@ -223,14 +223,23 @@
                                         }
                                         ?>
                                         <?php $tickets_null = $ticket->ticket_pcs - $ticket->ticket_pcs_count_sale; ?>
-                                        <?php if ($tickets_null != 0) { ?>
-                                            <div class="col-12 col-lg-10 col-xl-7 col-xxl-8">
+                                        <?php if ($tickets_null != 0) { $img_base = ""; 
+                                                if(base_url() == "http://localhost:8080")
+                                                {
+                                                    $img_base = base_url();
+                                                }else
+                                                {
+                                                    $img_base = "https://backoffice.eventups.com/";
+                                                }
+                                            ?>
+                                            <div class="col-12 col-lg-10 col-xl-7 col-xxl-8">    
                                                 <div class="post-it mb-3" data-aos="fade-up">
                                                     <div class="inner py-1 px-3">
                                                         <div class="row align-items-center">
                                                             <div class="col">
                                                                 <p class="p text-left"><?php echo $ticket->ticket_name . ' ' . $ticket->ticket_detail . '&nbsp;บัตรคงเหลือ (' . $tickets_count . ' ใบ)&nbsp; ราคา&nbsp;(' . $ticket->ticket_price . ' บาท/ใบ)' ?></p>
                                                             </div>
+                                                            <div class="col-auto"><img src="<?php echo $img_base . "/upload/" . $ticket->ticket_src;?>" title="<?php echo $ticket->ticket_name;?>" class="rounded" width="60" height="60"></div>
                                                             <div class="col-auto">
                                                                 <p>
                                                                     <?php

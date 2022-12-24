@@ -53,17 +53,16 @@ function buyTickets(id) {
         processData: false,
         data: JSON.stringify(dataObj),
         success: function (response) {
-          console.log(response.data);
           if (response.message == "กรุณาลองใหม่อีกครั้งหลัง 1 นาที") {
             alert("กรุณาลองใหม่อีกครั้งหลัง 1 นาที");
           } else {
             $("#QR_code").html(
-              "<div style='align: center;'><img src='https://chart.googleapis.com/chart?cht=qr&chl=" +
+              "<div style='align: center;' class='mb-3'><img src='https://chart.googleapis.com/chart?cht=qr&chl=" +
                 response.data.qrcode +
-                "&chs=160x160&chld=L|0' class='qr-code img-thumbnail img-responsive' />"
+                "&chs=160x160&chld=L|0' class='qr-code img-thumbnail img-responsive' /></div>"
             );
 
-            $('#QR_price').html("<div style='align: center;'>"+response.data.amount_format+" บาท</div>");
+            $('#QR_price').html("<div style='align: center;'>แสกนเพื่อชำระเงิน (จำนวน "+ buy_ticket +" ใบ) "+response.data.amount_format+" บาท</div>");
 
             $(".btnCancel").text("ปิด");
             $(".btnSave").css("display", "none");
@@ -78,6 +77,7 @@ function buyTickets(id) {
                   $("#modalChoose_Number").modal("hide");
                   $('#number_select').val('');
                   $("#QR_code").html('<div style="display: flex; justify-content: center;" id="QR_code"></div>');
+                  $('#QR_price').html('<div style="display: flex; justify-content: center;" id="QR_price"></div>');
           
                   $.ajax({
                       type: 'get',
