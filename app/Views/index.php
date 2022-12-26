@@ -186,7 +186,7 @@
             <section class="section-anchor" id="intro">
                 <picture>
                     <source srcset="assets/img/herobanner-m.jpg" media="(max-width:768px)">
-                    <img class="w-100" src="assets/img/herobanner.jpg" alt="">
+                    <img class="w-100" src="https://backoffice.eventups.com/assets/img/herobanner.jpg" alt="">
                 </picture>
             </section>
             <div class="overlay-container">
@@ -687,11 +687,11 @@
                                 </span> -->
                             </p>
                             <p class="box-social">
-                                <a class="item" title="Facbook Fanpage" href="javascript:void(0);" target="_blank"><img src="https://www.thaiticketmajor.com/assets/img/icon/facebook-circle.svg" alt="Facebook" /></a>
-                                <a class="item" title="Twitter" href="javascript:void(0);" target="_blank"><img src="https://www.thaiticketmajor.com/assets/img/icon/twitter-circle.svg" alt="Twitter" /></a>
-                                <a class="item" title="Line" href="javascript:void(0);" target="_blank"><img src="https://www.thaiticketmajor.com/assets/img/icon/line-circle.svg" alt="Line" /></a>
-                                <a class="item" title="Instagram" href="javascript:void(0);" target="_blank"><img src="https://www.thaiticketmajor.com/assets/img/icon/instagram-circle.svg" alt="Instagram" /></a>
-                                <a class="item" title="Youtube" href="javascript:void(0);" target="_blank"><img src="https://www.thaiticketmajor.com/assets/img/icon/youtube-circle.svg" alt="Youtube" /></a>
+                                <a class="item" title="Facbook Fanpage" href="javascript:void(0);" ><img src="../assets/img/icon/facebook-circle.svg" alt="Facebook" /></a>
+                                <!-- <a class="item" title="Twitter" href="javascript:void(0);" ><img src="../assets/img/icon/twitter-circle.svg" alt="Twitter" /></a>
+                                <a class="item" title="Line" href="javascript:void(0);"><img src="../assets/img/icon/line-circle.svg" alt="Line" /></a> -->
+                                <a class="item" title="Instagram" href="javascript:void(0);"><img src="../assets/img/icon/instagram-circle.svg" alt="Instagram" /></a>
+                                <a class="item" title="Youtube" href="javascript:void(0);"><img src="../assets/img/icon/youtube-circle.svg" alt="Youtube" /></a>
                             </p>
                         </div>
                     </div>
@@ -704,7 +704,7 @@
     <script src="assets/js/core/jquery.easing.js"></script>
     <script src="assets/js/core/jquery.mousewheel.js"></script>
     <script src="assets/js/core/detect.min.js"></script>
-    <script src="https://www.thaiticketmajor.com/assets/js/core/jquery.cookie.js"></script>
+    <script src="assets/js/core/jquery.cookie.js"></script>
     <script src="assets/js/vendor/fancybox/jquery.fancybox.min.js"></script>
     <script src="assets/js/vendor/slick/slick.min.js"></script>
     <!-- LAZY -->
@@ -715,7 +715,7 @@
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://www.thaiticketmajor.com/event-template/assets/js/main.min.js?v=162127"></script>
+    <script src="/event-template/assets/js/main.min.js?v=162127"></script>
     <script src="assets/js/template.min.js?v=162127"></script>
     <div style="display:none;">
         <div class="popup-signin" id="popup-signin">
