@@ -116,6 +116,7 @@ function fbLogout() {
   $.ajax({
     type: "GET",
     url: "/logout",
+    async: false
   }),
     document.getElementById("fbLink1").setAttribute("onclick", "fbLogin()");
   document.getElementById("fbLink1").innerHTML =
