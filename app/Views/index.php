@@ -3,6 +3,16 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta Http-Equiv="Cache" content="no-cache">
+    <meta Http-Equiv="Cache" content="no-cache">
+    <meta Http-Equiv="Pragma-Control" content="no-cache">
+    <meta Http-Equiv="Cache-directive" Content="no-cache">
+    <meta Http-Equiv="Pragma-directive" Content="no-cache">
+    <meta Http-Equiv="Cache-Control" Content="no-cache">
+    <meta Http-Equiv="Pragma" Content="no-cache">
+    <meta Http-Equiv="Expires" Content="0">
+    <meta Http-Equiv="Pragma-directive: no-cache">
+    <meta Http-Equiv="Cache-directive: no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <!-- <meta name="apple-mobile-web-app-capable" content="yes" /> -->
     <meta name="apple-mobile-web-app-title" content="" />
@@ -223,23 +233,22 @@
                                         }
                                         ?>
                                         <?php $tickets_null = $ticket->ticket_pcs - $ticket->ticket_pcs_count_sale; ?>
-                                        <?php if ($tickets_null != 0) { $img_base = ""; 
-                                                if(base_url() == "http://localhost:8080")
-                                                {
-                                                    $img_base = base_url();
-                                                }else
-                                                {
-                                                    $img_base = "https://backoffice.eventups.com";
-                                                }
-                                            ?>
-                                            <div class="col-12 col-lg-10 col-xl-7 col-xxl-8">    
+                                        <?php if ($tickets_null != 0) {
+                                            $img_base = "";
+                                            if (base_url() == "http://localhost:8080") {
+                                                $img_base = base_url();
+                                            } else {
+                                                $img_base = "https://backoffice.eventups.com";
+                                            }
+                                        ?>
+                                            <div class="col-12 col-lg-10 col-xl-7 col-xxl-8">
                                                 <div class="post-it mb-3" data-aos="fade-up">
                                                     <div class="inner py-1 px-3">
                                                         <div class="row align-items-center">
                                                             <div class="col">
                                                                 <p class="p text-left"><?php echo $ticket->ticket_name . ' ' . $ticket->ticket_detail . '&nbsp;บัตรคงเหลือ (' . $tickets_count . ' ใบ)&nbsp; ราคา&nbsp;(' . $ticket->ticket_price . ' บาท/ใบ)' ?></p>
                                                             </div>
-                                                            <div class="col-auto"><img src="<?php echo $img_base . "/upload/" . $ticket->ticket_src;?>" title="<?php echo $ticket->ticket_name;?>" class="rounded" width="60" height="60"></div>
+                                                            <div class="col-auto"><img src="<?php echo $img_base . "/upload/" . $ticket->ticket_src; ?>" title="<?php echo $ticket->ticket_name; ?>" class="rounded" width="60" height="60"></div>
                                                             <div class="col-auto">
                                                                 <p>
                                                                     <?php
@@ -623,19 +632,19 @@
                 <div class="row">
                     <div class="col-12 col-lg-4 col-xl-4 d-none d-lg-block" style="text-align: center;">
                         <!-- <address class="box-address"> -->
-                            <a class="ttm-logo" href="/">
+                        <a class="ttm-logo" href="/">
                             <img src="../assets/img/ttm-logo-dark.png" alt="tickets" />
-                            </a>
-                            <p>
-                                <span class="txtMed">บริษัท อีสานนครสิลป์ จำกัด</span>
-                            </p>
-                            <!-- <p>
+                        </a>
+                        <p>
+                            <span class="txtMed">บริษัท อีสานนครสิลป์ จำกัด</span>
+                        </p>
+                        <!-- <p>
                                 3199 อาคารมาลีนนท์ทาวเวอร์ ชั้น 27, ถนนพระราม 4,<br>
                                 แขวงคลองตัน, เขตคลองเตย, กรุงเทพฯ 10110 </p>
                             <p> -->
-                                โทร : 093-465-8509 <br>
-                                <!-- อีเมล : <a href="mailto:cs@thaiticketmajor.com">cs@thaiticketmajor.com</a> -->
-                            </p>
+                        โทร : 093-465-8509 <br>
+                        <!-- อีเมล : <a href="mailto:cs@thaiticketmajor.com">cs@thaiticketmajor.com</a> -->
+                        </p>
                         <!-- </address> -->
                     </div>
                     <!-- <div class="col-12 col-lg-2">
@@ -687,7 +696,7 @@
                                 </span> -->
                             </p>
                             <p class="box-social">
-                                <a class="item" title="Facbook Fanpage" href="javascript:void(0);" ><img src="../assets/img/icon/facebook-circle.svg" alt="Facebook" /></a>
+                                <a class="item" title="Facbook Fanpage" href="javascript:void(0);"><img src="../assets/img/icon/facebook-circle.svg" alt="Facebook" /></a>
                                 <!-- <a class="item" title="Twitter" href="javascript:void(0);" ><img src="../assets/img/icon/twitter-circle.svg" alt="Twitter" /></a>
                                 <a class="item" title="Line" href="javascript:void(0);"><img src="../assets/img/icon/line-circle.svg" alt="Line" /></a> -->
                                 <a class="item" title="Instagram" href="javascript:void(0);"><img src="../assets/img/icon/instagram-circle.svg" alt="Instagram" /></a>
