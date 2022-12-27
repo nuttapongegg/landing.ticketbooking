@@ -13369,7 +13369,7 @@ strong {
 
 @media (max-width: 991.98px) {
     .overlay-container .bg {
-        background: url("../img/herobanner-m.jpg") 50% 0/100% auto no-repeat;
+        background: url("https://backoffice.eventups.com/assets/img/herobanner-m.jpg") 50% 0/100% auto no-repeat;
         display: none
     }
 }
