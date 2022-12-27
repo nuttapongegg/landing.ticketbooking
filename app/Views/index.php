@@ -185,8 +185,8 @@
         <main class="main-container" role="main">
             <section class="section-anchor" id="intro">
                 <picture>
-                    <source srcset="https://backoffice.eventups.com/assets/img/herobanner-m.jpg" media="(max-width:768px)">
-                    <img class="w-100" src="https://backoffice.eventups.com/assets/img/herobanner.jpg" alt="">
+                    <source srcset="https://backoffice.eventups.com/upload/herobanner-m.jpg" media="(max-width:768px)">
+                    <img class="w-100" src="https://backoffice.eventups.com/upload/herobanner.jpg" alt="">
                 </picture>
             </section>
             <div class="overlay-container">
