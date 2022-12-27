@@ -229,7 +229,7 @@
                                                     $img_base = base_url();
                                                 }else
                                                 {
-                                                    $img_base = "https://backoffice.eventups.com/";
+                                                    $img_base = "https://backoffice.eventups.com";
                                                 }
                                             ?>
                                             <div class="col-12 col-lg-10 col-xl-7 col-xxl-8">    

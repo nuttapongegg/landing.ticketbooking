@@ -68,7 +68,7 @@ function buyTickets(id) {
             $(".btnSave").css("display", "none");
 
             var timerId = setInterval(countdown, 1000);
-            var timeLeft = 30;
+            var timeLeft = 90;
 
               function countdown() {
                 if (timeLeft == -1) {
