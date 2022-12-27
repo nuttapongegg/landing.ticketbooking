@@ -13356,7 +13356,7 @@ strong {
 }
 
 .overlay-container .bg {
-    background: url("https://backoffice.eventups.com/assets/img/herobanner.jpg") 50% 25%/cover no-repeat;
+    background: url("https://backoffice.eventups.com/upload/herobanner.jpg") 50% 25%/cover no-repeat;
     filter: blur(0);
     display: block;
     width: 100vw;
@@ -13369,7 +13369,7 @@ strong {
 
 @media (max-width: 991.98px) {
     .overlay-container .bg {
-        background: url("../img/herobanner-m.jpg") 50% 0/100% auto no-repeat;
+        background: url("../upload/herobanner-m.jpg") 50% 0/100% auto no-repeat;
         display: none
     }
 }
