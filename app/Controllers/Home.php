@@ -8,6 +8,8 @@ class Home extends BaseController
     {
         $TicketsModel = new \App\Models\TicketsModel();
         $data['tickets'] = $TicketsModel->getTicketsAll();
+        $BackgroundModel = new \App\Models\BackgroundModel();
+        $data['background'] = $BackgroundModel->getBackgroundByID(1);
         return view('index', $data);
     }
 

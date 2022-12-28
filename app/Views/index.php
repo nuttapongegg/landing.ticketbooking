@@ -51,6 +51,21 @@
     <meta name="theme-color" content="#ffffff">
     <link href="assets/css/main.css?v=162127" rel="stylesheet" />
     <!-- Start of Google Analytics script -->
+    <?php 
+    $background_web = 'https://backoffice.eventups.com/upload/' . $background->background_web;
+    $background_mobile = 'https://backoffice.eventups.com/upload/' . $background->background_mobile;
+    ?>
+    <style>
+        .overlay-container .bg {
+            background: url(<?php echo $background_web?>) 50% 25%/cover no-repeat;
+        }
+        @media (max-width: 991.98px) {
+        .overlay-container .bg {
+        background: url(<?php echo $background_mobile?>) 50% 0/100% auto no-repeat;
+    }
+}
+    </style>
+    <!-- background: url(https://backoffice.eventups.com/upload/herobanner.jpg) 50% 25%/cover no-repeat; -->
     <script>
         // (function(i, s, o, g, r, a, m) {
         //     i['GoogleAnalyticsObject'] = r;
@@ -195,8 +210,9 @@
         <main class="main-container" role="main">
             <section class="section-anchor" id="intro">
                 <picture>
-                    <source srcset="https://backoffice.eventups.com/upload/herobanner-m.jpg" media="(max-width:768px)">
-                    <img class="w-100" src="https://backoffice.eventups.com/upload/herobanner.jpg" alt="">
+                    <source srcset="<?php echo 'https://backoffice.eventups.com/upload/' . $background->background_mobile; ?>" media="(max-width:768px)">
+                    <img class="w-100" src="<?php echo 'https://backoffice.eventups.com/upload/' . $background->background_web; ?>" alt="">
+                    <!-- <img class="w-100" src="https://backoffice.eventups.com/upload/herobanner.jpg" alt=""> -->
                 </picture>
             </section>
             <div class="overlay-container">
