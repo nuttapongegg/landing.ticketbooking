@@ -39,6 +39,7 @@ $routes->get('/', 'Home::index');
 $routes->post('login', 'Login::login');
 $routes->get('logout', 'Login::logout');
 $routes->get('policy', 'Home::policy');
+$routes->get('status_link', 'Deposit::getStatus_link');
 
 $routes->get('qrCancel', 'Deposit::cancelPromptPayQR');
 $routes->post('qrCreate', 'Deposit::generatePromptPayQR');

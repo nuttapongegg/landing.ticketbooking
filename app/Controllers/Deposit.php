@@ -106,6 +106,13 @@ class Deposit extends BaseController
 
        $canceled = $this->PromptpayRefillModel->updatePromptpayRefillByMemberIDAndStatus(session()->get('userID'), PROMPTPAY_REFILL_STATUS_WAIT, [
             'status' => PROMPTPAY_REFILL_STATUS_CANCEL,
+            'status_link' => PROMPTPAY_REFILL_STATUS_EXPIRED,
+            'updated_at' => date('Y-m-d H:i:s')
+        ]);
+
+        $canceled = $this->PromptpayRefillModel->updatePromptpayRefillByMemberIDAndStatusLink(session()->get('userID'), PROMPTPAY_REFILL_STATUS_SUCCESS, PROMPTPAY_REFILL_STATUS_WAIT_LINK, [
+            'status' => PROMPTPAY_REFILL_STATUS_SUCCESS,
+            'status_link' => PROMPTPAY_REFILL_STATUS_EXPIRED,
             'updated_at' => date('Y-m-d H:i:s')
         ]);
 
@@ -164,4 +171,18 @@ class Deposit extends BaseController
         shuffle($valids);
         return $valids[0] ?? null;
     }
+
+    public function getStatus_link()
+    {
+        $memberID = session()->get('userID');
+       
+        $data_ticket = $this->TicketsModel->getStatusLickByUserLogin($memberID);
+
+        return $this->response->setJSON([
+            'status' => 200,
+            'error' => false,
+            'message' => json_encode($data_ticket)
+        ]);
+    }
+
 }

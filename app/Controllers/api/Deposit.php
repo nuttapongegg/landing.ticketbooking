@@ -28,7 +28,7 @@ class Deposit extends BaseController
             $bankSetting = $this->BankSettingModel->getBankSettingByBankTypeAndBankIDAndBankAccountNoAndStatusAndSystem('deposit', BANK_KBANK_ID, $inputBankAccountNo, 'on', 'SMS');
        
             // กรณี: หัวข้อความไม่ตรง
-            if (($inputSender !== TITLE_SENDER_KBANK) || ($inputSender !== TITLE_SENDER_SCB)) {
+            if (($inputSender !== TITLE_SENDER_KBANK) && ($inputSender !== TITLE_SENDER_SCB)) {
                 return;
             }
 
@@ -86,6 +86,7 @@ class Deposit extends BaseController
 
             $updatePromptpayRefill = $this->PromptpayRefillModel->updatePromptpayRefillByIDAndVersion($promptpayRefill->id, $promptpayRefill->version, [
                 'status'  => PROMPTPAY_REFILL_STATUS_SUCCESS,
+                'status_link' => 'รอส่งลิ้งค์',
                 'version' => $promptpayRefill->version . '_001'
             ]);
             if (!$updatePromptpayRefill) return;

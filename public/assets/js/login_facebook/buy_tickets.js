@@ -67,6 +67,7 @@ function buyTickets(id) {
             $(".btnCancel").text("ปิด");
             $(".btnSave").css("display", "none");
 
+           
             var timerId = setInterval(countdown, 1000);
             var timeLeft = 90;
 
@@ -90,6 +91,7 @@ function buyTickets(id) {
 
                 } else {
                   $(".btnCancel").text("ปิด (" + timeLeft + ")");
+                  getStatusLink();
                   timeLeft--;
                 }
               }
@@ -98,4 +100,23 @@ function buyTickets(id) {
       });
     }
   });
+}
+
+
+function getStatusLink(){
+  $.ajax({
+    type: 'get',
+    url: '/status_link',
+    contentType: 'application/json; charset=utf-8;',
+    processData: false,
+    success:  function (response) {
+      var result = JSON.parse(response.message);
+
+      if(result.id != null)
+      {
+        $('#QR_price').html('<div style="display: flex; justify-content: center;" id="QR_price"></div>');
+        $("#QR_code").html('<div style="display: flex; justify-content: center;" class="mb-3 mt-3" id="QR_code"><a href="https://web.facebook.com/groups/870632387307392/?ref=share&mibextid=S66gvF&_rdc=1&_rdr" target="_blank"><font style="font-size:20px;"> คลิกเพื่อเข้ากลุ่ม facebook</font></a></div>');
+      }
+    }
+});
 }

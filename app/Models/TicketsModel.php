@@ -52,4 +52,13 @@ class TicketsModel
 
         return $builder->where('id', $id)->delete();
     }
+
+    public function getStatusLickByUserLogin($id_member)
+    {
+        $builder = $this->db->table('promptpay_refills');
+        $builder->where('member_id', $id_member);
+        $builder->where('status', "สำเร็จ");
+        $builder->where('status_link', "รอส่งลิ้งค์");
+        return $builder->get()->getRow();
+    }
 }

@@ -47,11 +47,19 @@ class PromptpayRefillModel
         return $builder->where('id', $id)->update($data);
     }
 
-    public function updatePromptpayRefillByMemberIDAndStatus($memberID, $status, $data)
+    public function updatePromptpayRefillByMemberIDAndStatus($memberID, $status, $data)   
     {
         $builder = $this->db->table('promptpay_refills');
 
         return $builder->where('member_id', $memberID)->where('status', $status)->update($data);
+    }
+
+    
+    public function updatePromptpayRefillByMemberIDAndStatusLink($memberID, $status, $status_link, $data)   
+    {
+        $builder = $this->db->table('promptpay_refills');
+
+        return $builder->where('member_id', $memberID)->where('status', $status)->where('status_link', $status_link)->update($data);
     }
 
     public function updatePromptpayRefillByIDAndVersion($id, $version, $data)
