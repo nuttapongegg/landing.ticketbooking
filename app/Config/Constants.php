@@ -112,4 +112,4 @@ defined('PROMPTPAY_REFILL_STATUS_EXPIRED')       || define('PROMPTPAY_REFILL_STA
 
 defined('QR_PROMPTPAY_EXPIRED')                  || define('QR_PROMPTPAY_EXPIRED', 5);
 
-defined('LINE_NOTIFY_TOKEN')                  || define('LINE_NOTIFY_TOKEN', 'FcXOayjLo5wEbxSI9nGPwF3BK0nenNhyR5fxGOEKfAC');
+// defined('LINE_NOTIFY_TOKEN')                  || define('LINE_NOTIFY_TOKEN', 'FcXOayjLo5wEbxSI9nGPwF3BK0nenNhyR5fxGOEKfAC');

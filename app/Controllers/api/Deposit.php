@@ -103,6 +103,8 @@ class Deposit extends BaseController
                 $FBDataModel = new \App\Models\FBDataModel();
                 $FBData = $FBDataModel->getFBDataByFBID($promptpayRefill->member_id);
                 $dataTickets = $this->TicketsModel->getTicketsByID($promptpayRefill->transaction_id);
+                $SettingTokenModel = new \App\Models\SettingTokenModel();
+                $TokenID = $SettingTokenModel->getTokenID($dataTickets->id);
                 // Line notification
                 $sumprice = $dataTickets->ticket_price * $promptpayRefill->transaction_count;
                 $Message_Nofity = '';
@@ -114,7 +116,7 @@ class Deposit extends BaseController
                 //     $data_Booking_Day[0]->car_stock_title . "\n" . 'กับพนักงานชื่อ ' . $data_Booking_Day[0]->employee_title;
 
                 // $token = $nofity_Day->notify_line_token_status;
-                $token = LINE_NOTIFY_TOKEN; // LINE Token
+                $token = $TokenID->token; // LINE Token FcXOayjLo5wEbxSI9nGPwF3BK0nenNhyR5fxGOEKfAC
                 // $token = 'FcXOayjLo5wEbxSI9nGPwF3BK0nenNhyR5fxGOEKfAC'; // LINE Token
                 //Message
                 $mymessage = $Message_Nofity;
