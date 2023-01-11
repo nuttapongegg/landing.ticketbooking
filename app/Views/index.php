@@ -786,7 +786,8 @@
                         <div class="form-group">
                             <div align="left" class=" mb-3">
                                 <label for="number_select" id="numlabel" style="text-align: center;">กรอกจำนวนบัตร</label>
-                                <input type="number" class="form-control" oninput="this.value = Math.round(this.value);" id="number_select" name="number_select" placeholder="กรุณากรอกจำนวน">
+                                <!-- <input type="number" class="form-control" oninput="this.value = Math.round(this.value);" id="number_select" name="number_select" placeholder="กรุณากรอกจำนวน"> -->
+                                <input type="number" class="form-control"  id="number_select" name="number_select" value="1"  placeholder="กรุณากรอกจำนวน" readonly>
                             </div>
                             <div style="display: flex; justify-content: center;" id="QR_code"></div>
                             <div style="display: flex; justify-content: center;" id="QR_price"></div>

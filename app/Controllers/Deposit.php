@@ -76,7 +76,8 @@ class Deposit extends BaseController
                 'bank_setting_id' => $bankSetting->id,
                 'bank_account_no' => $bankSetting->bank_account_no,
                 'transaction_id' => $requestPayload->id_tickets,
-                'transaction_count' => $requestPayload->count_tickets_in_stock_update,
+                'transaction_count' => $requestPayload->count_tickets_in_stock_update,   
+                'transaction_but_now' => $requestPayload->buy_ticket, 
                 'version'         => $memberID . '_' . time()
             ]);
 

@@ -69,7 +69,7 @@ function buyTickets(id) {
 
            
             var timerId = setInterval(countdown, 1000);
-            var timeLeft = 90;
+            var timeLeft = 180;
 
               function countdown() {
                 if (timeLeft == -1) {
@@ -91,6 +91,7 @@ function buyTickets(id) {
 
                 } else {
                   $(".btnCancel").text("ปิด (" + timeLeft + ")");
+                  $('#number_select').val('');
                   getStatusLink();
                   timeLeft--;
                 }

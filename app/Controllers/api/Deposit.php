@@ -106,10 +106,10 @@ class Deposit extends BaseController
                 $SettingTokenModel = new \App\Models\SettingTokenModel();
                 $TokenID = $SettingTokenModel->getTokenID($dataTickets->id);
                 // Line notification
-                $sumprice = $dataTickets->ticket_price * $promptpayRefill->transaction_count;
+                $sumprice = $dataTickets->ticket_price * $promptpayRefill->transaction_but_now;
                 $Message_Nofity = '';
                 // $Image_Nofity = '';
-                $Message_Nofity = $FBData->fb_name . "\n" . 'ทำการซื้อบัตรคอนเสิร์ต ' . $dataTickets->ticket_name. ' จำนวน ' .$promptpayRefill->transaction_count.
+                $Message_Nofity = $FBData->fb_name . "\n" . 'ทำการซื้อบัตรคอนเสิร์ต ' . $dataTickets->ticket_name. ' จำนวน ' .$promptpayRefill->transaction_but_now.
                 ' ใบ ราคา '.$sumprice.' บาท';
                 // $Message_Nofity = session()->get('username') . "\n" . 'ทำการเปลี่ยนสถานะเอกสาร' . "\n" . 'จาก ' . $booking->status . ' เป็น ' .
                 //     $data_Booking_Day[0]->status . "\n" . 'เอกสารของคุณ ' . $data_Booking_Day[0]->customer_title . "\n" . 'ทำการซื้อรถ ' .
